@@ -212,7 +212,7 @@ const IntroSection = memo(() => {
           <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #10C8E0, transparent)' }} />
         </div>
 
-        <div style={{ position: 'relative', width: 'min(560px, 80vw)', height: 180 }}>
+        <div style={{ position: 'relative', width: 'min(640px, 90vw)', height: 230, borderRadius: 24, overflow: 'hidden' }}>
           <SparklesCore
             background="transparent"
             minSize={0.4}
@@ -224,8 +224,8 @@ const IntroSection = memo(() => {
           />
           <div style={{
             position: 'absolute', inset: 0, background: '#000',
-            maskImage: 'radial-gradient(350px 200px at top, transparent 20%, white)',
-            WebkitMaskImage: 'radial-gradient(350px 200px at top, transparent 20%, white)',
+            maskImage: 'radial-gradient(450px 280px at top, transparent 20%, white)',
+            WebkitMaskImage: 'radial-gradient(450px 280px at top, transparent 20%, white)',
           }} />
         </div>
       </div>
