@@ -16,12 +16,20 @@ const fadeUp = {
 
 /* ─── Static data ────────────────────────────────── */
 const THEMES: [string, string][] = [
-  ['#3B82F6','#10C8E0'],['#8B5CF6','#EC4899'],['#10B981','#3B82F6'],
+  ['#7C3AED','#C026D3'],['#8B5CF6','#EC4899'],['#10B981','#7C3AED'],
   ['#F59E0B','#EF4444'],['#EF4444','#EC4899'],['#06B6D4','#8B5CF6'],
-  ['#84CC16','#10B981'],['#F97316','#EAB308'],['#6366F1','#3B82F6'],
+  ['#84CC16','#10B981'],['#F97316','#EAB308'],['#6366F1','#7C3AED'],
   ['#64748B','#94A3B8'],
 ]
 const SWIPE_COLORS = ['#22C55E', '#EF4444', '#FBBF24']
+
+const SCREENSHOT_SRCS = [
+  '/screenshots/swipe-to-clean.png',
+  '/screenshots/by-year-month.png',
+  '/screenshots/track-progress.png',
+  '/screenshots/reclaim-storage.png',
+  '/screenshots/make-it-yours.png',
+]
 
 const AppleIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -53,19 +61,19 @@ function LanguageBadges() {
             onClick={() => setLang(code)}
             style={{
               display: 'flex', alignItems: 'center', gap: 8,
-              background: active ? 'rgba(59,130,246,0.12)' : 'rgba(255,255,255,0.04)',
-              border: `1.5px solid ${active ? 'rgba(59,130,246,0.5)' : 'rgba(255,255,255,0.08)'}`,
+              background: active ? 'rgba(124,58,237,0.12)' : 'rgba(255,255,255,0.04)',
+              border: `1.5px solid ${active ? 'rgba(124,58,237,0.5)' : 'rgba(255,255,255,0.08)'}`,
               borderRadius: 9999,
               padding: '10px 22px',
               fontSize: 14, fontWeight: active ? 700 : 500,
-              color: active ? '#60A5FA' : 'rgba(240,244,255,0.65)',
+              color: active ? '#A78BFA' : 'rgba(240,244,255,0.65)',
               cursor: 'pointer',
               transition: 'all 0.2s',
-              boxShadow: active ? '0 0 16px rgba(59,130,246,0.2)' : 'none',
+              boxShadow: active ? '0 0 16px rgba(124,58,237,0.2)' : 'none',
             }}
             onMouseEnter={e => {
               if (!active) {
-                e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)'
+                e.currentTarget.style.borderColor = 'rgba(124,58,237,0.3)'
                 e.currentTarget.style.color = '#F0F4FF'
                 e.currentTarget.style.transform = 'translateY(-2px)'
               }
@@ -114,8 +122,8 @@ function LangPicker() {
         style={{
           display: 'flex', alignItems: 'center', gap: 6,
           padding: '6px 12px', borderRadius: 8,
-          background: open ? 'rgba(59,130,246,0.12)' : 'rgba(255,255,255,0.04)',
-          border: `1.5px solid ${open ? 'rgba(59,130,246,0.4)' : 'rgba(255,255,255,0.1)'}`,
+          background: open ? 'rgba(124,58,237,0.12)' : 'rgba(255,255,255,0.04)',
+          border: `1.5px solid ${open ? 'rgba(124,58,237,0.4)' : 'rgba(255,255,255,0.1)'}`,
           color: '#F0F4FF', fontSize: 13, fontWeight: 600, transition: 'all 0.2s',
         }}
         onMouseEnter={e => { if (!open) { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)' } }}
@@ -142,8 +150,8 @@ function LangPicker() {
               style={{
                 display: 'flex', alignItems: 'center', gap: 8,
                 padding: '8px 12px', borderRadius: 8, border: 'none',
-                background: lang === code ? 'rgba(59,130,246,0.15)' : 'transparent',
-                color: lang === code ? '#60A5FA' : 'rgba(240,244,255,0.7)',
+                background: lang === code ? 'rgba(124,58,237,0.15)' : 'transparent',
+                color: lang === code ? '#A78BFA' : 'rgba(240,244,255,0.7)',
                 fontSize: 13, fontWeight: lang === code ? 700 : 500,
                 cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s',
                 width: '100%',
@@ -189,7 +197,7 @@ const IntroSection = memo(() => {
       aria-hidden="true"
       style={{
         position: 'fixed', inset: 0, zIndex: 300,
-        background: '#000',
+        background: 'radial-gradient(ellipse 80% 60% at 20% 90%, #1a0a3d 0%, #000 50%, #000 100%)',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         willChange: 'opacity, transform',
@@ -206,10 +214,10 @@ const IntroSection = memo(() => {
         </h1>
 
         <div style={{ position: 'relative', width: 'min(560px, 75vw)', height: 2 }}>
-          <div style={{ position: 'absolute', left: '10%', right: '10%', top: 0, height: 2, background: 'linear-gradient(to right, transparent, #3B82F6, transparent)', filter: 'blur(3px)' }} />
-          <div style={{ position: 'absolute', left: '10%', right: '10%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #3B82F6, transparent)' }} />
-          <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 4, background: 'linear-gradient(to right, transparent, #10C8E0, transparent)', filter: 'blur(4px)' }} />
-          <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #10C8E0, transparent)' }} />
+          <div style={{ position: 'absolute', left: '10%', right: '10%', top: 0, height: 2, background: 'linear-gradient(to right, transparent, #7C3AED, transparent)', filter: 'blur(3px)' }} />
+          <div style={{ position: 'absolute', left: '10%', right: '10%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #7C3AED, transparent)' }} />
+          <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 4, background: 'linear-gradient(to right, transparent, #C026D3, transparent)', filter: 'blur(4px)' }} />
+          <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #C026D3, transparent)' }} />
         </div>
 
         <div className="intro-sparkles-wrap" style={{ position: 'relative', width: 'min(640px, 90vw)', height: 230, borderRadius: 24, overflow: 'hidden' }}>
@@ -285,7 +293,7 @@ const NavBar = memo(() => {
     }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', height: '100%', display: 'flex', alignItems: 'center', gap: 32 }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 800, fontSize: 18, color: '#fff', flexShrink: 0 }}>
-          <div style={{ width: 36, height: 36, borderRadius: 8, background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 11, fontWeight: 800, flexShrink: 0 }}>PM</div>
+          <img src="/app-icon.png" alt="PhotoMint" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
           PhotoMint
         </a>
         <div className="nav-links" style={{ display: 'flex', gap: 28, flex: 1 }}>
@@ -299,10 +307,10 @@ const NavBar = memo(() => {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
           <span className="nav-lang"><LangPicker /></span>
-          <a href="#download" style={{ padding: '8px 20px', borderRadius: 9999, fontSize: 14, fontWeight: 600, border: '1.5px solid rgba(59,130,246,0.3)', color: '#fff', background: 'rgba(255,255,255,0.04)', transition: 'all 0.2s', whiteSpace: 'nowrap' }}
-            onMouseEnter={e => { e.currentTarget.style.background='rgba(59,130,246,0.08)'; e.currentTarget.style.borderColor='#3B82F6' }}
-            onMouseLeave={e => { e.currentTarget.style.background='rgba(255,255,255,0.04)'; e.currentTarget.style.borderColor='rgba(59,130,246,0.3)' }}>
-            {t.nav.comingSoon}
+          <a href="#download" className="nav-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 18px', borderRadius: 9999, fontSize: 13, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED, #C026D3)', boxShadow: '0 2px 14px rgba(124,58,237,0.45)', transition: 'transform 0.2s, box-shadow 0.2s', whiteSpace: 'nowrap' }}
+            onMouseEnter={e => { e.currentTarget.style.transform='translateY(-1px)'; e.currentTarget.style.boxShadow='0 4px 20px rgba(124,58,237,0.6)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 2px 14px rgba(124,58,237,0.45)' }}>
+            <AppleIcon /> {t.nav.comingSoon}
           </a>
         </div>
       </div>
@@ -325,21 +333,21 @@ export default function App() {
       <main>
         {/* ══════════ HERO ══════════ */}
         <section id="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', padding: 'calc(68px + 4rem) 0 6rem', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: -200, left: -100, width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', bottom: -150, right: -50, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(16,200,224,0.12) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: -200, left: -100, width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', bottom: -150, right: -50, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(192,38,211,0.12) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
 
           <div className="hero-inner section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 64 }}>
             <motion.div style={{ flex: 1, minWidth: 300, maxWidth: 580 }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 600, color: '#10C8E0', background: 'rgba(16,200,224,0.08)', border: '1px solid rgba(16,200,224,0.2)', padding: '4px 16px', borderRadius: 9999, marginBottom: 24 }}>
-                <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#10C8E0', animation: 'pulseDot 2s ease-in-out infinite', display: 'inline-block' }} />
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 600, color: '#C026D3', background: 'rgba(192,38,211,0.08)', border: '1px solid rgba(192,38,211,0.2)', padding: '4px 16px', borderRadius: 9999, marginBottom: 24 }}>
+                <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C026D3', animation: 'pulseDot 2s ease-in-out infinite', display: 'inline-block' }} />
                 {t.hero.badge}
               </div>
-              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #60A5FA, #10C8E0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</h1>
+              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</h1>
               <p style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.2, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.hero.subtitle}</p>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 32, maxWidth: 440 }}>{t.hero.desc}</p>
-              <a href="#download" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '16px 32px', borderRadius: 9999, fontSize: 17, fontWeight: 600, color: '#fff', background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', boxShadow: '0 4px 20px rgba(59,130,246,0.35)', transition: 'transform 0.2s, box-shadow 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 8px 32px rgba(59,130,246,0.5)' }}
-                onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 4px 20px rgba(59,130,246,0.35)' }}>
+              <a href="#download" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '18px 36px', borderRadius: 9999, fontSize: 18, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)', transition: 'transform 0.2s, box-shadow 0.2s', letterSpacing: '-0.01em' }}
+                onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 12px 40px rgba(124,58,237,0.65), 0 4px 12px rgba(192,38,211,0.4)' }}
+                onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)' }}>
                 <AppleIcon /> {t.hero.cta}
               </a>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 48 }}>
@@ -351,7 +359,7 @@ export default function App() {
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                     {i > 0 && <div style={{ width: 1, height: 40, background: 'rgba(255,255,255,0.08)' }} />}
                     <div>
-                      <div style={{ fontSize: '1.875rem', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, background: 'linear-gradient(135deg, #60A5FA, #10C8E0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{s.n}</div>
+                      <div style={{ fontSize: '1.875rem', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{s.n}</div>
                       <div style={{ fontSize: 10, fontWeight: 500, color: 'rgba(240,244,255,0.35)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: 2 }}>{s.l}</div>
                     </div>
                   </div>
@@ -361,12 +369,12 @@ export default function App() {
 
             {/* Phone mockup */}
             <motion.div className="hero-phone-wrap" style={{ position: 'relative', flexShrink: 0 }} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 0.65, ease: 'easeOut' } }} viewport={{ once: true }}>
-              <div style={{ width: 260, height: 530, borderRadius: 44, background: 'linear-gradient(160deg, #2a2a36, #1a1a24)', border: '1.5px solid rgba(255,255,255,0.12)', boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(59,130,246,0.1)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <div style={{ width: 260, height: 530, borderRadius: 44, background: 'linear-gradient(160deg, #2a2a36, #1a1a24)', border: '1.5px solid rgba(255,255,255,0.12)', boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(124,58,237,0.1)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                 <div style={{ width: 96, height: 28, background: '#000', borderRadius: 20, margin: '14px auto 0', flexShrink: 0 }} />
                 <div style={{ flex: 1, background: '#121219', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 14px 4px', fontSize: 11, fontWeight: 600, color: '#F0F4FF' }}><span>9:41</span><span>●●●</span></div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 14px 8px' }}>
-                    <span style={{ fontSize: 15, fontWeight: 800, background: 'linear-gradient(135deg, #60A5FA, #10C8E0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</span>
+                    <span style={{ fontSize: 15, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</span>
                     <span style={{ fontSize: 11, color: 'rgba(240,244,255,0.35)' }}>June 2024</span>
                   </div>
                   <div style={{ flex: 1, position: 'relative', padding: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -403,7 +411,7 @@ export default function App() {
         <section id="features" style={{ padding: '6rem 0', background: '#17171f', position: 'relative', overflow: 'hidden' }}>
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.features.label}</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.features.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.features.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.features.sub}</p>
             </motion.div>
@@ -411,8 +419,8 @@ export default function App() {
               {t.features.cards.map((f, i) => (
                 <motion.article key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 32 }}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }} variants={fadeUp} custom={i * 80}
-                  whileHover={{ y: -4, borderColor: 'rgba(59,130,246,0.3)', boxShadow: '0 0 40px rgba(59,130,246,0.15)' }}>
-                  <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 20 }}>
+                  whileHover={{ y: -4, borderColor: 'rgba(124,58,237,0.3)', boxShadow: '0 0 40px rgba(124,58,237,0.15)' }}>
+                  <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'linear-gradient(135deg, #7C3AED, #C026D3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 20 }}>
                     {['👆','📅','💾','🔍','🎬','📱'][i]}
                   </div>
                   <h3 style={{ fontSize: 17, fontWeight: 700, color: '#F0F4FF', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h3>
@@ -428,7 +436,7 @@ export default function App() {
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 800px 400px at center, rgba(139,92,246,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.how.label}</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.how.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.how.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.how.sub}</p>
             </motion.div>
@@ -436,7 +444,7 @@ export default function App() {
               {t.how.steps.map((s, i) => (
                 <motion.div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 32, textAlign: 'center' }}
                   initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i * 120}
-                  whileHover={{ y: -4, boxShadow: '0 0 40px rgba(59,130,246,0.15)' }}>
+                  whileHover={{ y: -4, boxShadow: '0 0 40px rgba(124,58,237,0.15)' }}>
                   <div style={{ fontSize: '3rem', fontWeight: 900, height: 64, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 16, background: '#1e1e28', marginBottom: 24, color: SWIPE_COLORS[i] }}>
                     {['→','←','↑'][i]}
                   </div>
@@ -453,7 +461,7 @@ export default function App() {
         <section id="screenshots" style={{ padding: '6rem 0', background: '#17171f', overflow: 'hidden' }}>
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 5rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.screenshots.label}</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.screenshots.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.screenshots.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.screenshots.sub}</p>
             </motion.div>
@@ -470,11 +478,11 @@ export default function App() {
 
                   {/* Left: staggered feature titles */}
                   <div className="screenshots-text-col" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    {t.features.cards.slice(0, 5).map((card, index) => (
+                    {t.screenshots.slides.map((title, index) => (
                       <TextStaggerHover
                         key={index}
                         index={index}
-                        text={card.title}
+                        text={title}
                         style={{
                           fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)',
                           fontWeight: 900,
@@ -493,18 +501,15 @@ export default function App() {
                     {/* Glow behind phone */}
                     <div style={{
                       position: 'absolute', inset: 0,
-                      background: 'radial-gradient(ellipse at center, rgba(59,130,246,0.15) 0%, transparent 70%)',
+                      background: 'radial-gradient(ellipse at center, rgba(124,58,237,0.15) 0%, transparent 70%)',
                       pointerEvents: 'none',
                     }} />
-                    {[
-                      { index: 0, src: '/screenshots/app-screenshot.png',   alt: 'PhotoMint – Swipe to clean' },
-                      { index: 1, src: '/screenshots/app-screenshot-2.png', alt: 'PhotoMint – By year & month' },
-                    ].map(({ index, src, alt }) => (
+                    {SCREENSHOT_SRCS.map((src, index) => (
                       <HoverSliderImage
                         key={index}
                         index={index}
                         src={src}
-                        alt={alt}
+                        alt={`PhotoMint – ${t.screenshots.slides[index]}`}
                         style={{
                           position: 'absolute',
                           top: 0, left: '50%',
@@ -513,7 +518,7 @@ export default function App() {
                           maxWidth: 300,
                           height: 'auto',
                           display: 'block',
-                          filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(59,130,246,0.15))',
+                          filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(124,58,237,0.15))',
                         }}
                         loading="eager"
                         decoding="async"
@@ -529,12 +534,12 @@ export default function App() {
 
         {/* ══════════ PRIVACY ══════════ */}
         <section id="privacy" style={{ padding: '6rem 0', background: '#121219', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 600px at center, rgba(59,130,246,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 600px at center, rgba(124,58,237,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 32, padding: 'clamp(2rem, 5vw, 4rem)', position: 'relative', overflow: 'hidden' }}
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(59,130,246,0.05) 0%, transparent 60%)', borderRadius: 32, pointerEvents: 'none' }} />
-              <div style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 32, margin: '0 auto 24px' }}>🔒</div>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(124,58,237,0.05) 0%, transparent 60%)', borderRadius: 32, pointerEvents: 'none' }} />
+              <div style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, #7C3AED, #C026D3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 32, margin: '0 auto 24px' }}>🔒</div>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', color: '#F0F4FF', marginBottom: 20, lineHeight: 1.15, whiteSpace: 'pre-line' }}>{t.privacy.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', maxWidth: 500, margin: '0 auto 32px' }}>{t.privacy.desc}</p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 32 }}>
@@ -548,8 +553,8 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://mertkerimi.github.io/photomint-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#3B82F6', transition: 'color 0.15s' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#10C8E0')} onMouseLeave={e => (e.currentTarget.style.color = '#3B82F6')}>
+              <a href="https://mertkerimi.github.io/photomint-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#C026D3')} onMouseLeave={e => (e.currentTarget.style.color = '#7C3AED')}>
                 {t.privacy.policy}
               </a>
             </motion.div>
@@ -560,7 +565,7 @@ export default function App() {
         <section id="languages" style={{ padding: '6rem 0', background: '#17171f' }}>
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.languages.label}</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.languages.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.languages.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.languages.sub}</p>
             </motion.div>
@@ -572,7 +577,7 @@ export default function App() {
         <section id="themes" style={{ padding: '6rem 0', background: '#121219' }}>
           <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.themes.label}</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.themes.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.themes.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.themes.sub}</p>
             </motion.div>
@@ -588,14 +593,16 @@ export default function App() {
 
         {/* ══════════ DOWNLOAD CTA ══════════ */}
         <section id="download" style={{ padding: '6rem 0', background: '#17171f', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: 0, left: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', top: 0, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(16,200,224,0.1) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: 0, left: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: 0, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(192,38,211,0.1) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
           <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
             <motion.div style={{ maxWidth: 560, margin: '0 auto' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 20, whiteSpace: 'pre-line' }}>{t.cta.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 40, whiteSpace: 'pre-line' }}>{t.cta.sub}</p>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-                <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '20px 40px', borderRadius: 9999, fontSize: 19, fontWeight: 600, color: '#fff', background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', boxShadow: '0 4px 20px rgba(59,130,246,0.35)', opacity: 0.9, pointerEvents: 'none' }}>
+                <a href="#" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 14, padding: '22px 48px', borderRadius: 9999, fontSize: 20, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 8px 40px rgba(124,58,237,0.55), 0 2px 12px rgba(192,38,211,0.35)', letterSpacing: '-0.01em', minWidth: 320, transition: 'transform 0.2s, box-shadow 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 14px 50px rgba(124,58,237,0.7), 0 4px 16px rgba(192,38,211,0.45)' }}
+                  onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 8px 40px rgba(124,58,237,0.55), 0 2px 12px rgba(192,38,211,0.35)' }}>
                   <AppleIcon /> {t.cta.cta}
                 </a>
                 <p style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', margin: 0 }}>{t.cta.note}</p>
@@ -609,7 +616,7 @@ export default function App() {
       <footer style={{ background: '#121219', borderTop: '1px solid rgba(255,255,255,0.08)', padding: '3rem 0' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800, background: 'linear-gradient(135deg, #60A5FA, #10C8E0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</div>
+            <div style={{ fontSize: 18, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</div>
             <div style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', marginTop: 4 }}>{t.footer.tagline}</div>
           </div>
           <nav style={{ display: 'flex', gap: 24 }}>

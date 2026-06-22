@@ -44,9 +44,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ─── Mobile responsive ─── */
 @media (max-width: 767px) {
-  /* Nav: hide middle links, keep logo + CTA */
+  /* Nav: hide middle links on mobile, keep logo + lang + CTA */
   .nav-links { display: none !important; }
-  .nav-lang  { display: none !important; }
+  .nav-cta { padding: 8px 14px !important; font-size: 13px !important; }
 
   /* Hero: stack vertically */
   .hero-inner { flex-direction: column !important; gap: 40px !important; }

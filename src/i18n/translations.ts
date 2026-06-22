@@ -38,7 +38,7 @@ export interface T {
     label: string; heading: string; sub: string
     steps: Array<{ dir: string; action: string; desc: string }>
   }
-  screenshots: { label: string; heading: string; sub: string }
+  screenshots: { label: string; heading: string; sub: string; slides: string[] }
   privacy: {
     label: string; heading: string; desc: string
     pills: { noUploads: string; noCloud: string; noAccount: string }
@@ -52,12 +52,12 @@ export interface T {
 
 export const translations: Record<LangCode, T> = {
   en: {
-    nav: { features: 'Features', howItWorks: 'How it Works', screenshots: 'Screenshots', privacy: 'Privacy', comingSoon: 'Coming Soon' },
+    nav: { features: 'Features', howItWorks: 'How it Works', screenshots: 'Screenshots', privacy: 'Privacy', comingSoon: 'Download' },
     hero: {
-      badge: 'Now in TestFlight Beta',
+      badge: 'Available on the App Store',
       subtitle: 'Clean up your photos\nin seconds.',
       desc: 'Swipe to tidy your gallery — private, on-device, no account.',
-      cta: 'Coming Soon to the App Store',
+      cta: 'Download on the App Store',
       stats: { themes: 'Color Themes', languages: 'Languages', accounts: 'Accounts Needed' },
     },
     features: {
@@ -79,7 +79,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Swipe up',    action: 'Decide later', desc: 'Not sure? Skip it and come back.' },
       ],
     },
-    screenshots: { label: 'Screenshots', heading: 'See it in action.', sub: 'Clean, minimal, and built for speed.' },
+    screenshots: { label: 'Screenshots', heading: 'See it in action.', sub: 'Clean, minimal, and built for speed.', slides: ['Swipe to clean', 'By year & month', 'Track your progress', 'Reclaim storage', 'Make it yours'] },
     privacy: {
       label: 'Privacy', heading: 'Your photos never leave\nyour device.',
       desc: 'Everything happens on your device. Your photos never leave your phone — no uploads, no cloud, no account required.',
@@ -90,20 +90,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personalization', heading: 'Make it yours.', sub: '10 beautiful color themes, plus full dark mode support.' },
     cta: {
       heading: 'Ready to reclaim\nyour storage?',
-      sub: 'PhotoMint is coming to the App Store soon.\nClean thousands of photos — in minutes.',
-      cta: 'Coming Soon to the App Store',
-      note: 'Currently in TestFlight beta. The App Store release is coming soon.',
+      sub: 'PhotoMint is on the App Store now.\nClean thousands of photos — in minutes.',
+      cta: 'Download on the App Store',
+      note: 'Free · No account required · Works offline',
     },
-    footer: { tagline: 'Clean up your photos in seconds.', policy: 'Privacy Policy', support: 'Support', copy: '© 2024 Mert Kerimi · All rights reserved.' },
+    footer: { tagline: 'Clean up your photos in seconds.', policy: 'Privacy Policy', support: 'Support', copy: '© 2024 · All rights reserved.' },
   },
 
   tr: {
-    nav: { features: 'Özellikler', howItWorks: 'Nasıl Çalışır', screenshots: 'Ekran Görüntüleri', privacy: 'Gizlilik', comingSoon: 'Çok Yakında' },
+    nav: { features: 'Özellikler', howItWorks: 'Nasıl Çalışır', screenshots: 'Ekran Görüntüleri', privacy: 'Gizlilik', comingSoon: 'İndir' },
     hero: {
-      badge: 'TestFlight Beta\'da Şimdi',
+      badge: 'App Store\'da Mevcut',
       subtitle: 'Fotoğraflarınızı saniyeler\niçinde temizleyin.',
       desc: 'Galerinizi düzenlemek için kaydırın — özel, cihazınızda, hesap gerekmez.',
-      cta: 'App Store\'a Çok Yakında',
+      cta: 'App Store\'dan İndir',
       stats: { themes: 'Renk Teması', languages: 'Dil', accounts: 'Hesap Gerekmez' },
     },
     features: {
@@ -125,7 +125,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Yukarı kaydır', action: 'Sonra karar ver', desc: 'Emin değil misiniz? Atlayıp sonra dönün.' },
       ],
     },
-    screenshots: { label: 'Ekran Görüntüleri', heading: 'Çalışırken görün.', sub: 'Temiz, sade ve hız için tasarlandı.' },
+    screenshots: { label: 'Ekran Görüntüleri', heading: 'Çalışırken görün.', sub: 'Temiz, sade ve hız için tasarlandı.', slides: ['Temizlemek için kaydır', 'Yıl ve aya göre', 'İlerlemeyi takip et', 'Depolama alanı kazan', 'Kendine özgü yap'] },
     privacy: {
       label: 'Gizlilik', heading: 'Fotoğraflarınız cihazınızdan\nhiç çıkmaz.',
       desc: 'Her şey cihazınızda gerçekleşir. Fotoğraflarınız telefonunuzdan çıkmaz — yükleme yok, bulut yok, hesap gerekmez.',
@@ -136,20 +136,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Kişiselleştirme', heading: 'Kendinize özgü yapın.', sub: '10 güzel renk teması ve tam karanlık mod desteği.' },
     cta: {
       heading: 'Depolama alanınızı geri\nalmaya hazır mısınız?',
-      sub: 'PhotoMint yakında App Store\'da.\nBinlerce fotoğrafı dakikalar içinde temizleyin.',
-      cta: 'App Store\'a Çok Yakında',
-      note: 'Şu an TestFlight beta\'da. App Store sürümü çok yakında.',
+      sub: 'PhotoMint artık App Store\'da.\nBinlerce fotoğrafı dakikalar içinde temizleyin.',
+      cta: 'App Store\'dan İndir',
+      note: 'Ücretsiz · Hesap gerekmez · Çevrimdışı çalışır',
     },
-    footer: { tagline: 'Fotoğraflarınızı saniyeler içinde temizleyin.', policy: 'Gizlilik Politikası', support: 'Destek', copy: '© 2024 Mert Kerimi · Tüm hakları saklıdır.' },
+    footer: { tagline: 'Fotoğraflarınızı saniyeler içinde temizleyin.', policy: 'Gizlilik Politikası', support: 'Destek', copy: '© 2024 · Tüm hakları saklıdır.' },
   },
 
   de: {
-    nav: { features: 'Funktionen', howItWorks: 'So funktioniert\'s', screenshots: 'Screenshots', privacy: 'Datenschutz', comingSoon: 'Demnächst' },
+    nav: { features: 'Funktionen', howItWorks: 'So funktioniert\'s', screenshots: 'Screenshots', privacy: 'Datenschutz', comingSoon: 'Herunterladen' },
     hero: {
-      badge: 'Jetzt in TestFlight Beta',
+      badge: 'Jetzt im App Store',
       subtitle: 'Fotos aufräumen\nin Sekunden.',
       desc: 'Wischen zum Aufräumen Ihrer Galerie — privat, auf dem Gerät, kein Konto.',
-      cta: 'Demnächst im App Store',
+      cta: 'Im App Store laden',
       stats: { themes: 'Farbthemen', languages: 'Sprachen', accounts: 'Keine Konten' },
     },
     features: {
@@ -171,7 +171,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Nach oben wischen',   action: 'Später entscheiden', desc: 'Unsicher? Überspringen und zurückkehren.' },
       ],
     },
-    screenshots: { label: 'Screenshots', heading: 'In Aktion sehen.', sub: 'Sauber, minimal und für Geschwindigkeit gebaut.' },
+    screenshots: { label: 'Screenshots', heading: 'In Aktion sehen.', sub: 'Sauber, minimal und für Geschwindigkeit gebaut.', slides: ['Wischen zum Aufräumen', 'Nach Jahr & Monat', 'Fortschritt verfolgen', 'Speicher zurückgewinnen', 'Mach es zu deinem'] },
     privacy: {
       label: 'Datenschutz', heading: 'Ihre Fotos verlassen\nnie Ihr Gerät.',
       desc: 'Alles passiert auf Ihrem Gerät. Ihre Fotos verlassen nie Ihr Telefon — keine Uploads, keine Cloud, kein Konto erforderlich.',
@@ -182,20 +182,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personalisierung', heading: 'Machen Sie es Ihres.', sub: '10 schöne Farbthemen und vollständiger Dunkelmodus.' },
     cta: {
       heading: 'Bereit, Ihren Speicher\nzurückzugewinnen?',
-      sub: 'PhotoMint kommt bald in den App Store.\nTausende Fotos — in Minuten aufgeräumt.',
-      cta: 'Demnächst im App Store',
-      note: 'Derzeit in TestFlight beta. Die App Store-Version kommt bald.',
+      sub: 'PhotoMint ist jetzt im App Store.\nTausende Fotos — in Minuten aufgeräumt.',
+      cta: 'Im App Store laden',
+      note: 'Kostenlos · Kein Konto · Offline verfügbar',
     },
-    footer: { tagline: 'Fotos aufräumen in Sekunden.', policy: 'Datenschutz', support: 'Support', copy: '© 2024 Mert Kerimi · Alle Rechte vorbehalten.' },
+    footer: { tagline: 'Fotos aufräumen in Sekunden.', policy: 'Datenschutz', support: 'Support', copy: '© 2024 · Alle Rechte vorbehalten.' },
   },
 
   fr: {
-    nav: { features: 'Fonctionnalités', howItWorks: 'Comment ça marche', screenshots: 'Captures d\'écran', privacy: 'Confidentialité', comingSoon: 'Bientôt' },
+    nav: { features: 'Fonctionnalités', howItWorks: 'Comment ça marche', screenshots: 'Captures d\'écran', privacy: 'Confidentialité', comingSoon: 'Télécharger' },
     hero: {
-      badge: 'Maintenant en bêta TestFlight',
+      badge: 'Disponible sur l\'App Store',
       subtitle: 'Nettoyez vos photos\nen quelques secondes.',
       desc: 'Faites glisser pour ranger votre galerie — privé, sur l\'appareil, sans compte.',
-      cta: 'Bientôt sur l\'App Store',
+      cta: 'Télécharger sur l\'App Store',
       stats: { themes: 'Thèmes couleur', languages: 'Langues', accounts: 'Aucun compte' },
     },
     features: {
@@ -217,7 +217,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Glisser vers le haut', action: 'Décider plus tard', desc: 'Pas sûr ? Passez et revenez plus tard.' },
       ],
     },
-    screenshots: { label: 'Captures d\'écran', heading: 'Voir en action.', sub: 'Propre, minimal et conçu pour la vitesse.' },
+    screenshots: { label: 'Captures d\'écran', heading: 'Voir en action.', sub: 'Propre, minimal et conçu pour la vitesse.', slides: ['Glisser pour nettoyer', 'Par année & mois', 'Suis ta progression', 'Libère de l\'espace', 'Personnalise-le'] },
     privacy: {
       label: 'Confidentialité', heading: 'Vos photos ne quittent\njamais votre appareil.',
       desc: 'Tout se passe sur votre appareil. Vos photos ne quittent jamais votre téléphone — aucun téléchargement, aucun cloud, aucun compte requis.',
@@ -228,20 +228,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personnalisation', heading: 'Faites-en le vôtre.', sub: '10 beaux thèmes de couleur et mode sombre complet.' },
     cta: {
       heading: 'Prêt à récupérer\nvotre espace ?',
-      sub: 'PhotoMint arrive bientôt sur l\'App Store.\nNettoyez des milliers de photos — en minutes.',
-      cta: 'Bientôt sur l\'App Store',
-      note: 'Actuellement en bêta TestFlight. La version App Store arrive bientôt.',
+      sub: 'PhotoMint est maintenant sur l\'App Store.\nNettoyez des milliers de photos — en minutes.',
+      cta: 'Télécharger sur l\'App Store',
+      note: 'Gratuit · Sans compte · Fonctionne hors ligne',
     },
-    footer: { tagline: 'Nettoyez vos photos en quelques secondes.', policy: 'Confidentialité', support: 'Support', copy: '© 2024 Mert Kerimi · Tous droits réservés.' },
+    footer: { tagline: 'Nettoyez vos photos en quelques secondes.', policy: 'Confidentialité', support: 'Support', copy: '© 2024 · Tous droits réservés.' },
   },
 
   es: {
-    nav: { features: 'Características', howItWorks: 'Cómo funciona', screenshots: 'Capturas', privacy: 'Privacidad', comingSoon: 'Próximamente' },
+    nav: { features: 'Características', howItWorks: 'Cómo funciona', screenshots: 'Capturas', privacy: 'Privacidad', comingSoon: 'Descargar' },
     hero: {
-      badge: 'Ahora en TestFlight Beta',
+      badge: 'Disponible en el App Store',
       subtitle: 'Limpia tus fotos\nen segundos.',
       desc: 'Desliza para ordenar tu galería — privado, en el dispositivo, sin cuenta.',
-      cta: 'Próximamente en el App Store',
+      cta: 'Descargar en el App Store',
       stats: { themes: 'Temas de color', languages: 'Idiomas', accounts: 'Sin cuentas' },
     },
     features: {
@@ -263,7 +263,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Deslizar hacia arriba', action: 'Decidir después',   desc: '¿No estás seguro? Sáltalo y vuelve.' },
       ],
     },
-    screenshots: { label: 'Capturas', heading: 'Míralo en acción.', sub: 'Limpio, minimal y diseñado para la velocidad.' },
+    screenshots: { label: 'Capturas', heading: 'Míralo en acción.', sub: 'Limpio, minimal y diseñado para la velocidad.', slides: ['Desliza para limpiar', 'Por año y mes', 'Sigue tu progreso', 'Recupera espacio', 'Hazlo tuyo'] },
     privacy: {
       label: 'Privacidad', heading: 'Tus fotos nunca salen\nde tu dispositivo.',
       desc: 'Todo ocurre en tu dispositivo. Tus fotos nunca salen de tu teléfono — sin cargas, sin nube, sin cuenta requerida.',
@@ -274,20 +274,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personalización', heading: 'Hazlo tuyo.', sub: '10 hermosos temas de color y modo oscuro completo.' },
     cta: {
       heading: '¿Listo para recuperar\ntu almacenamiento?',
-      sub: 'PhotoMint llega pronto al App Store.\nLimpia miles de fotos — en minutos.',
-      cta: 'Próximamente en el App Store',
-      note: 'Actualmente en beta TestFlight. La versión del App Store llega pronto.',
+      sub: 'PhotoMint ya está en el App Store.\nLimpia miles de fotos — en minutos.',
+      cta: 'Descargar en el App Store',
+      note: 'Gratis · Sin cuenta · Funciona sin conexión',
     },
-    footer: { tagline: 'Limpia tus fotos en segundos.', policy: 'Privacidad', support: 'Soporte', copy: '© 2024 Mert Kerimi · Todos los derechos reservados.' },
+    footer: { tagline: 'Limpia tus fotos en segundos.', policy: 'Privacidad', support: 'Soporte', copy: '© 2024 · Todos los derechos reservados.' },
   },
 
   it: {
-    nav: { features: 'Funzionalità', howItWorks: 'Come funziona', screenshots: 'Screenshot', privacy: 'Privacy', comingSoon: 'Prossimamente' },
+    nav: { features: 'Funzionalità', howItWorks: 'Come funziona', screenshots: 'Screenshot', privacy: 'Privacy', comingSoon: 'Scarica' },
     hero: {
-      badge: 'Ora in beta TestFlight',
+      badge: 'Disponibile su App Store',
       subtitle: 'Pulisci le tue foto\nin pochi secondi.',
       desc: 'Scorri per riordinare la tua galleria — privato, sul dispositivo, nessun account.',
-      cta: 'Prossimamente sull\'App Store',
+      cta: 'Scarica su App Store',
       stats: { themes: 'Temi colore', languages: 'Lingue', accounts: 'Nessun account' },
     },
     features: {
@@ -309,7 +309,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Scorri in su', action: 'Decidi dopo',      desc: 'Non sei sicuro? Salta e torna dopo.' },
       ],
     },
-    screenshots: { label: 'Screenshot', heading: 'Guardalo in azione.', sub: 'Pulito, minimale e progettato per la velocità.' },
+    screenshots: { label: 'Screenshot', heading: 'Guardalo in azione.', sub: 'Pulito, minimale e progettato per la velocità.', slides: ['Scorri per pulire', 'Per anno e mese', 'Traccia i progressi', 'Recupera spazio', 'Rendilo tuo'] },
     privacy: {
       label: 'Privacy', heading: 'Le tue foto non lasciano\nmai il tuo dispositivo.',
       desc: 'Tutto avviene sul tuo dispositivo. Le tue foto non lasciano mai il tuo telefono — nessun caricamento, nessun cloud, nessun account richiesto.',
@@ -320,20 +320,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personalizzazione', heading: 'Rendilo tuo.', sub: '10 bellissimi temi colore e modalità scura completa.' },
     cta: {
       heading: 'Pronto a recuperare\nlo spazio?',
-      sub: 'PhotoMint arriva presto sull\'App Store.\nPulisci migliaia di foto — in minuti.',
-      cta: 'Prossimamente sull\'App Store',
-      note: 'Attualmente in beta TestFlight. La versione App Store arriva presto.',
+      sub: 'PhotoMint è ora su App Store.\nPulisci migliaia di foto — in minuti.',
+      cta: 'Scarica su App Store',
+      note: 'Gratuito · Nessun account · Funziona offline',
     },
-    footer: { tagline: 'Pulisci le tue foto in pochi secondi.', policy: 'Privacy', support: 'Supporto', copy: '© 2024 Mert Kerimi · Tutti i diritti riservati.' },
+    footer: { tagline: 'Pulisci le tue foto in pochi secondi.', policy: 'Privacy', support: 'Supporto', copy: '© 2024 · Tutti i diritti riservati.' },
   },
 
   pt: {
-    nav: { features: 'Recursos', howItWorks: 'Como funciona', screenshots: 'Capturas', privacy: 'Privacidade', comingSoon: 'Em breve' },
+    nav: { features: 'Recursos', howItWorks: 'Como funciona', screenshots: 'Capturas', privacy: 'Privacidade', comingSoon: 'Baixar' },
     hero: {
-      badge: 'Agora na beta TestFlight',
+      badge: 'Disponível na App Store',
       subtitle: 'Organize suas fotos\nem segundos.',
       desc: 'Deslize para organizar sua galeria — privado, no dispositivo, sem conta.',
-      cta: 'Em breve na App Store',
+      cta: 'Baixar na App Store',
       stats: { themes: 'Temas de cor', languages: 'Idiomas', accounts: 'Sem conta' },
     },
     features: {
@@ -355,7 +355,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Deslize para cima', action: 'Decidir depois',     desc: 'Não tem certeza? Pule e volte depois.' },
       ],
     },
-    screenshots: { label: 'Capturas', heading: 'Veja em ação.', sub: 'Limpo, minimal e feito para velocidade.' },
+    screenshots: { label: 'Capturas', heading: 'Veja em ação.', sub: 'Limpo, minimal e feito para velocidade.', slides: ['Deslize para limpar', 'Por ano e mês', 'Acompanhe o progresso', 'Recupere espaço', 'Faça do seu jeito'] },
     privacy: {
       label: 'Privacidade', heading: 'Suas fotos nunca saem\ndo seu dispositivo.',
       desc: 'Tudo acontece no seu dispositivo. Suas fotos nunca saem do seu celular — sem uploads, sem nuvem, sem conta necessária.',
@@ -366,20 +366,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Personalização', heading: 'Faça do seu jeito.', sub: '10 belos temas de cor e modo escuro completo.' },
     cta: {
       heading: 'Pronto para recuperar\nseu armazenamento?',
-      sub: 'PhotoMint chega em breve à App Store.\nLimpe milhares de fotos — em minutos.',
-      cta: 'Em breve na App Store',
-      note: 'Atualmente em beta TestFlight. A versão App Store chega em breve.',
+      sub: 'PhotoMint já está na App Store.\nLimpe milhares de fotos — em minutos.',
+      cta: 'Baixar na App Store',
+      note: 'Gratuito · Sem conta · Funciona offline',
     },
-    footer: { tagline: 'Organize suas fotos em segundos.', policy: 'Privacidade', support: 'Suporte', copy: '© 2024 Mert Kerimi · Todos os direitos reservados.' },
+    footer: { tagline: 'Organize suas fotos em segundos.', policy: 'Privacidade', support: 'Suporte', copy: '© 2024 · Todos os direitos reservados.' },
   },
 
   ja: {
-    nav: { features: '機能', howItWorks: '使い方', screenshots: 'スクリーンショット', privacy: 'プライバシー', comingSoon: '近日公開' },
+    nav: { features: '機能', howItWorks: '使い方', screenshots: 'スクリーンショット', privacy: 'プライバシー', comingSoon: 'ダウンロード' },
     hero: {
-      badge: 'TestFlight ベータ公開中',
+      badge: 'App Storeで入手可能',
       subtitle: '写真を数秒で\n整理しよう。',
       desc: 'スワイプしてギャラリーを片付けよう — プライベート、オンデバイス、アカウント不要。',
-      cta: 'App Storeで近日公開',
+      cta: 'App Storeでダウンロード',
       stats: { themes: 'カラーテーマ', languages: '言語', accounts: 'アカウント不要' },
     },
     features: {
@@ -401,7 +401,7 @@ export const translations: Record<LangCode, T> = {
         { dir: '上にスワイプ', action: 'あとで決める', desc: '迷ったらスキップして戻ってこよう。' },
       ],
     },
-    screenshots: { label: 'スクリーンショット', heading: '実際に見てみよう。', sub: 'クリーン、ミニマル、スピード重視。' },
+    screenshots: { label: 'スクリーンショット', heading: '実際に見てみよう。', sub: 'クリーン、ミニマル、スピード重視。', slides: ['スワイプして整理', '年月別に整理', '進捗を追跡', 'ストレージを取り戻す', '自分好みにカスタマイズ'] },
     privacy: {
       label: 'プライバシー', heading: '写真はデバイスから\n出ません。',
       desc: 'すべてデバイス上で処理されます。写真がスマホから出ることはありません — アップロードなし、クラウドなし、アカウント不要。',
@@ -412,20 +412,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'パーソナライズ', heading: '自分好みに。', sub: '10種類のカラーテーマとダークモード対応。' },
     cta: {
       heading: 'ストレージを\n取り戻す準備はできていますか？',
-      sub: 'PhotoMintは近日App Storeに登場。\n何千もの写真を数分でクリーンアップ。',
-      cta: 'App Storeで近日公開',
-      note: '現在TestFlightベータ版。App Store版は近日公開予定。',
+      sub: 'PhotoMintはApp Storeで公開中。\n何千もの写真を数分でクリーンアップ。',
+      cta: 'App Storeでダウンロード',
+      note: '無料 · アカウント不要 · オフライン対応',
     },
-    footer: { tagline: '写真を数秒で整理しよう。', policy: 'プライバシーポリシー', support: 'サポート', copy: '© 2024 Mert Kerimi · All rights reserved.' },
+    footer: { tagline: '写真を数秒で整理しよう。', policy: 'プライバシーポリシー', support: 'サポート', copy: '© 2024 · All rights reserved.' },
   },
 
   ko: {
-    nav: { features: '기능', howItWorks: '사용법', screenshots: '스크린샷', privacy: '개인정보', comingSoon: '출시 예정' },
+    nav: { features: '기능', howItWorks: '사용법', screenshots: '스크린샷', privacy: '개인정보', comingSoon: '다운로드' },
     hero: {
-      badge: 'TestFlight 베타 출시 중',
+      badge: 'App Store에서 이용 가능',
       subtitle: '몇 초 만에 사진을\n정리하세요.',
       desc: '스와이프로 갤러리를 정리 — 비공개, 기기 내 처리, 계정 불필요.',
-      cta: 'App Store에 곧 출시',
+      cta: 'App Store에서 다운로드',
       stats: { themes: '컬러 테마', languages: '언어', accounts: '계정 불필요' },
     },
     features: {
@@ -447,7 +447,7 @@ export const translations: Record<LangCode, T> = {
         { dir: '위로 스와이프', action: '나중에 결정',    desc: '확실하지 않으신가요? 건너뛰고 나중에 결정.' },
       ],
     },
-    screenshots: { label: '스크린샷', heading: '직접 확인해보세요.', sub: '깔끔하고 미니멀하며 속도를 위해 설계되었습니다.' },
+    screenshots: { label: '스크린샷', heading: '직접 확인해보세요.', sub: '깔끔하고 미니멀하며 속도를 위해 설계되었습니다.', slides: ['스와이프로 정리', '연도 및 월별', '진행 상황 추적', '저장 공간 되찾기', '나만의 스타일로'] },
     privacy: {
       label: '개인정보', heading: '사진은 절대 기기를\n벗어나지 않습니다.',
       desc: '모든 것이 기기에서 처리됩니다. 사진은 절대 폰을 벗어나지 않습니다 — 업로드 없음, 클라우드 없음, 계정 불필요.',
@@ -458,20 +458,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: '개인화', heading: '나만의 스타일로.', sub: '10가지 아름다운 컬러 테마와 완전한 다크 모드 지원.' },
     cta: {
       heading: '저장 공간을\n되찾을 준비가 되셨나요?',
-      sub: 'PhotoMint가 곧 App Store에 출시됩니다.\n수천 장의 사진을 몇 분 만에 정리하세요.',
-      cta: 'App Store에 곧 출시',
-      note: '현재 TestFlight 베타 버전입니다. App Store 버전이 곧 출시됩니다.',
+      sub: 'PhotoMint가 App Store에 출시되었습니다.\n수천 장의 사진을 몇 분 만에 정리하세요.',
+      cta: 'App Store에서 다운로드',
+      note: '무료 · 계정 불필요 · 오프라인 작동',
     },
-    footer: { tagline: '몇 초 만에 사진을 정리하세요.', policy: '개인정보 처리방침', support: '고객 지원', copy: '© 2024 Mert Kerimi · All rights reserved.' },
+    footer: { tagline: '몇 초 만에 사진을 정리하세요.', policy: '개인정보 처리방침', support: '고객 지원', copy: '© 2024 · All rights reserved.' },
   },
 
   zh: {
-    nav: { features: '功能', howItWorks: '使用方法', screenshots: '截图', privacy: '隐私', comingSoon: '即将推出' },
+    nav: { features: '功能', howItWorks: '使用方法', screenshots: '截图', privacy: '隐私', comingSoon: '下载' },
     hero: {
-      badge: '现已在 TestFlight 公测',
+      badge: '现已在 App Store 上架',
       subtitle: '几秒内整理\n您的照片。',
       desc: '滑动整理相册 — 私密、本地处理、无需账号。',
-      cta: '即将登陆 App Store',
+      cta: '在 App Store 下载',
       stats: { themes: '色彩主题', languages: '语言', accounts: '无需账号' },
     },
     features: {
@@ -493,7 +493,7 @@ export const translations: Record<LangCode, T> = {
         { dir: '向上滑动', action: '稍后决定',   desc: '不确定？跳过，稍后再决定。' },
       ],
     },
-    screenshots: { label: '截图', heading: '看看实际效果。', sub: '简洁、极简，专为速度而生。' },
+    screenshots: { label: '截图', heading: '看看实际效果。', sub: '简洁、极简，专为速度而生。', slides: ['滑动清理', '按年月整理', '追踪进度', '释放存储空间', '打造专属风格'] },
     privacy: {
       label: '隐私', heading: '您的照片永远\n不会离开您的设备。',
       desc: '一切都在您的设备上处理。您的照片永远不会离开您的手机 — 无需上传、无需云端、无需账号。',
@@ -504,20 +504,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: '个性化', heading: '打造专属风格。', sub: '10 款精美色彩主题，完整深色模式支持。' },
     cta: {
       heading: '准备好找回\n您的存储空间了吗？',
-      sub: 'PhotoMint 即将登陆 App Store。\n数千张照片 — 几分钟整理完毕。',
-      cta: '即将登陆 App Store',
-      note: '目前处于 TestFlight 测试阶段。App Store 版本即将推出。',
+      sub: 'PhotoMint 现已在 App Store 上架。\n数千张照片 — 几分钟整理完毕。',
+      cta: '在 App Store 下载',
+      note: '免费 · 无需账号 · 支持离线使用',
     },
-    footer: { tagline: '几秒内整理您的照片。', policy: '隐私政策', support: '支持', copy: '© 2024 Mert Kerimi · 保留所有权利。' },
+    footer: { tagline: '几秒内整理您的照片。', policy: '隐私政策', support: '支持', copy: '© 2024 · 保留所有权利。' },
   },
 
   ru: {
-    nav: { features: 'Функции', howItWorks: 'Как это работает', screenshots: 'Скриншоты', privacy: 'Конфиденциальность', comingSoon: 'Скоро' },
+    nav: { features: 'Функции', howItWorks: 'Как это работает', screenshots: 'Скриншоты', privacy: 'Конфиденциальность', comingSoon: 'Скачать' },
     hero: {
-      badge: 'Теперь в бета-тесте TestFlight',
+      badge: 'Доступно в App Store',
       subtitle: 'Уберите фото\nза секунды.',
       desc: 'Смахивайте для порядка в галерее — приватно, на устройстве, без аккаунта.',
-      cta: 'Скоро в App Store',
+      cta: 'Скачать в App Store',
       stats: { themes: 'Цветовые темы', languages: 'Языков', accounts: 'Без аккаунта' },
     },
     features: {
@@ -539,7 +539,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'Вверх',  action: 'Решить позже', desc: 'Сомневаетесь? Пропустите и вернитесь.' },
       ],
     },
-    screenshots: { label: 'Скриншоты', heading: 'Посмотрите в действии.', sub: 'Чистый, минималистичный и быстрый.' },
+    screenshots: { label: 'Скриншоты', heading: 'Посмотрите в действии.', sub: 'Чистый, минималистичный и быстрый.', slides: ['Смахни и убери', 'По годам и месяцам', 'Отслеживай прогресс', 'Освободи память', 'Сделай его своим'] },
     privacy: {
       label: 'Конфиденциальность', heading: 'Ваши фото никогда не\nпокидают устройство.',
       desc: 'Всё происходит на вашем устройстве. Фото никогда не уходят с телефона — без загрузок, без облака, без аккаунта.',
@@ -550,20 +550,20 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'Персонализация', heading: 'Сделайте его своим.', sub: '10 красивых цветовых тем и полная тёмная тема.' },
     cta: {
       heading: 'Готовы вернуть\nсвободное место?',
-      sub: 'PhotoMint скоро появится в App Store.\nТысячи фото — убраны за минуты.',
-      cta: 'Скоро в App Store',
-      note: 'Сейчас в бета-тесте TestFlight. Версия App Store выходит скоро.',
+      sub: 'PhotoMint уже в App Store.\nТысячи фото — убраны за минуты.',
+      cta: 'Скачать в App Store',
+      note: 'Бесплатно · Без аккаунта · Работает офлайн',
     },
-    footer: { tagline: 'Уберите фото за секунды.', policy: 'Конфиденциальность', support: 'Поддержка', copy: '© 2024 Mert Kerimi · Все права защищены.' },
+    footer: { tagline: 'Уберите фото за секунды.', policy: 'Конфиденциальность', support: 'Поддержка', copy: '© 2024 · Все права защищены.' },
   },
 
   ar: {
-    nav: { features: 'الميزات', howItWorks: 'كيف يعمل', screenshots: 'لقطات الشاشة', privacy: 'الخصوصية', comingSoon: 'قريباً' },
+    nav: { features: 'الميزات', howItWorks: 'كيف يعمل', screenshots: 'لقطات الشاشة', privacy: 'الخصوصية', comingSoon: 'تحميل' },
     hero: {
-      badge: 'متاح الآن في بيتا TestFlight',
+      badge: 'متاح على App Store',
       subtitle: 'نظّم صورك\nفي ثوانٍ.',
       desc: 'مرّر لترتيب معرضك — خاص، على الجهاز، بدون حساب.',
-      cta: 'قريباً على App Store',
+      cta: 'تحميل من App Store',
       stats: { themes: 'ثيمات الألوان', languages: 'لغات', accounts: 'لا حسابات' },
     },
     features: {
@@ -585,7 +585,7 @@ export const translations: Record<LangCode, T> = {
         { dir: 'مرّر لأعلى',  action: 'قرّر لاحقاً', desc: 'غير متأكد؟ تخطَّه وعُد لاحقاً.' },
       ],
     },
-    screenshots: { label: 'لقطات الشاشة', heading: 'شاهده في العمل.', sub: 'نظيف، بسيط، مصمّم للسرعة.' },
+    screenshots: { label: 'لقطات الشاشة', heading: 'شاهده في العمل.', sub: 'نظيف، بسيط، مصمّم للسرعة.', slides: ['مرّر لتنظيف', 'حسب السنة والشهر', 'تتبّع تقدّمك', 'استعد مساحة التخزين', 'اجعله لك'] },
     privacy: {
       label: 'الخصوصية', heading: 'صورك لا تغادر\nجهازك أبداً.',
       desc: 'كل شيء يحدث على جهازك. صورك لا تغادر هاتفك أبداً — بلا رفع، بلا سحابة، بلا حساب.',
@@ -596,10 +596,10 @@ export const translations: Record<LangCode, T> = {
     themes: { label: 'التخصيص', heading: 'اجعله لك.', sub: '10 ثيمات ألوان جميلة ودعم كامل للوضع المظلم.' },
     cta: {
       heading: 'هل أنت مستعد\nلاستعادة مساحتك؟',
-      sub: 'PhotoMint قادم قريباً إلى App Store.\ننظّف آلاف الصور — في دقائق.',
-      cta: 'قريباً على App Store',
-      note: 'حالياً في بيتا TestFlight. إصدار App Store قادم قريباً.',
+      sub: 'PhotoMint متاح الآن على App Store.\nnنظّف آلاف الصور — في دقائق.',
+      cta: 'تحميل من App Store',
+      note: 'مجاني · بدون حساب · يعمل بدون إنترنت',
     },
-    footer: { tagline: 'نظّم صورك في ثوانٍ.', policy: 'سياسة الخصوصية', support: 'الدعم', copy: '© 2024 Mert Kerimi · جميع الحقوق محفوظة.' },
+    footer: { tagline: 'نظّم صورك في ثوانٍ.', policy: 'سياسة الخصوصية', support: 'الدعم', copy: '© 2024 · جميع الحقوق محفوظة.' },
   },
 }
