@@ -212,7 +212,7 @@ const IntroSection = memo(() => {
           <div style={{ position: 'absolute', left: '30%', right: '30%', top: 0, height: 1, background: 'linear-gradient(to right, transparent, #10C8E0, transparent)' }} />
         </div>
 
-        <div style={{ position: 'relative', width: 'min(640px, 90vw)', height: 230, borderRadius: 24, overflow: 'hidden' }}>
+        <div className="intro-sparkles-wrap" style={{ position: 'relative', width: 'min(640px, 90vw)', height: 230, borderRadius: 24, overflow: 'hidden' }}>
           <SparklesCore
             background="transparent"
             minSize={0.4}
@@ -288,7 +288,7 @@ const NavBar = memo(() => {
           <div style={{ width: 36, height: 36, borderRadius: 8, background: 'linear-gradient(135deg, #3B82F6, #10C8E0)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 11, fontWeight: 800, flexShrink: 0 }}>PM</div>
           PhotoMint
         </a>
-        <div style={{ display: 'flex', gap: 28, flex: 1 }}>
+        <div className="nav-links" style={{ display: 'flex', gap: 28, flex: 1 }}>
           {navLinks.map(({ href, label }) => (
             <a key={href} href={href} style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.65)', transition: 'color 0.15s', whiteSpace: 'nowrap' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')}
@@ -298,7 +298,7 @@ const NavBar = memo(() => {
           ))}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
-          <LangPicker />
+          <span className="nav-lang"><LangPicker /></span>
           <a href="#download" style={{ padding: '8px 20px', borderRadius: 9999, fontSize: 14, fontWeight: 600, border: '1.5px solid rgba(59,130,246,0.3)', color: '#fff', background: 'rgba(255,255,255,0.04)', transition: 'all 0.2s', whiteSpace: 'nowrap' }}
             onMouseEnter={e => { e.currentTarget.style.background='rgba(59,130,246,0.08)'; e.currentTarget.style.borderColor='#3B82F6' }}
             onMouseLeave={e => { e.currentTarget.style.background='rgba(255,255,255,0.04)'; e.currentTarget.style.borderColor='rgba(59,130,246,0.3)' }}>
@@ -328,7 +328,7 @@ export default function App() {
           <div style={{ position: 'absolute', top: -200, left: -100, width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', bottom: -150, right: -50, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(16,200,224,0.12) 0%, transparent 70%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
 
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 64 }}>
+          <div className="hero-inner section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 64 }}>
             <motion.div style={{ flex: 1, minWidth: 300, maxWidth: 580 }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 600, color: '#10C8E0', background: 'rgba(16,200,224,0.08)', border: '1px solid rgba(16,200,224,0.2)', padding: '4px 16px', borderRadius: 9999, marginBottom: 24 }}>
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#10C8E0', animation: 'pulseDot 2s ease-in-out infinite', display: 'inline-block' }} />
@@ -360,7 +360,7 @@ export default function App() {
             </motion.div>
 
             {/* Phone mockup */}
-            <motion.div style={{ position: 'relative', flexShrink: 0 }} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 0.65, ease: 'easeOut' } }} viewport={{ once: true }}>
+            <motion.div className="hero-phone-wrap" style={{ position: 'relative', flexShrink: 0 }} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 0.65, ease: 'easeOut' } }} viewport={{ once: true }}>
               <div style={{ width: 260, height: 530, borderRadius: 44, background: 'linear-gradient(160deg, #2a2a36, #1a1a24)', border: '1.5px solid rgba(255,255,255,0.12)', boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(59,130,246,0.1)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                 <div style={{ width: 96, height: 28, background: '#000', borderRadius: 20, margin: '14px auto 0', flexShrink: 0 }} />
                 <div style={{ flex: 1, background: '#121219', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -401,13 +401,13 @@ export default function App() {
 
         {/* ══════════ FEATURES ══════════ */}
         <section id="features" style={{ padding: '6rem 0', background: '#17171f', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.features.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.features.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)' }}>{t.features.sub}</p>
             </motion.div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
               {t.features.cards.map((f, i) => (
                 <motion.article key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 32 }}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }} variants={fadeUp} custom={i * 80}
@@ -426,7 +426,7 @@ export default function App() {
         {/* ══════════ HOW IT WORKS ══════════ */}
         <section id="how-it-works" style={{ padding: '6rem 0', background: '#121219', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 800px 400px at center, rgba(139,92,246,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.how.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.how.heading}</h2>
@@ -451,7 +451,7 @@ export default function App() {
 
         {/* ══════════ SCREENSHOTS ══════════ */}
         <section id="screenshots" style={{ padding: '6rem 0', background: '#17171f', overflow: 'hidden' }}>
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 5rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.screenshots.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.screenshots.heading}</h2>
@@ -465,10 +465,11 @@ export default function App() {
                   gridTemplateColumns: '1fr 1fr',
                   gap: 64,
                   alignItems: 'center',
-                }}>
+                }}
+                className="screenshots-grid">
 
                   {/* Left: staggered feature titles */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  <div className="screenshots-text-col" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                     {t.features.cards.slice(0, 5).map((card, index) => (
                       <TextStaggerHover
                         key={index}
@@ -488,7 +489,7 @@ export default function App() {
                   </div>
 
                   {/* Right: iPhone mockup images stacked */}
-                  <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', minHeight: 560 }}>
+                  <div className="screenshots-phone-col" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', minHeight: 560 }}>
                     {/* Glow behind phone */}
                     <div style={{
                       position: 'absolute', inset: 0,
@@ -529,7 +530,7 @@ export default function App() {
         {/* ══════════ PRIVACY ══════════ */}
         <section id="privacy" style={{ padding: '6rem 0', background: '#121219', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 600px at center, rgba(59,130,246,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 32, padding: 'clamp(2rem, 5vw, 4rem)', position: 'relative', overflow: 'hidden' }}
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(59,130,246,0.05) 0%, transparent 60%)', borderRadius: 32, pointerEvents: 'none' }} />
@@ -557,7 +558,7 @@ export default function App() {
 
         {/* ══════════ LANGUAGES ══════════ */}
         <section id="languages" style={{ padding: '6rem 0', background: '#17171f' }}>
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.languages.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.languages.heading}</h2>
@@ -569,7 +570,7 @@ export default function App() {
 
         {/* ══════════ THEMES ══════════ */}
         <section id="themes" style={{ padding: '6rem 0', background: '#121219' }}>
-          <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
+          <div className="section-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem' }}>
             <motion.div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 4rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#3B82F6', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>{t.themes.label}</p>
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 16 }}>{t.themes.heading}</h2>

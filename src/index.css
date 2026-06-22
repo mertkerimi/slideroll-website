@@ -41,3 +41,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(8px); }
 }
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 767px) {
+  /* Nav: hide middle links, keep logo + CTA */
+  .nav-links { display: none !important; }
+  .nav-lang  { display: none !important; }
+
+  /* Hero: stack vertically */
+  .hero-inner { flex-direction: column !important; gap: 40px !important; }
+  .hero-phone-wrap { display: none !important; }
+
+  /* Screenshots: single column, phone on top */
+  .screenshots-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .screenshots-phone-col {
+    order: -1;
+    height: 460px !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+  }
+  .screenshots-text-col { font-size: clamp(1.25rem, 5vw, 2rem) !important; }
+  .screenshots-phone-col img { max-width: 220px !important; }
+
+  /* Section padding tighter on mobile */
+  .section-inner { padding: 0 1.25rem !important; }
+
+  /* Features grid: single column on very small screens */
+  .features-grid { grid-template-columns: 1fr !important; }
+
+  /* Intro sparkles: smaller */
+  .intro-sparkles-wrap { width: min(340px, 88vw) !important; height: 180px !important; }
+}
