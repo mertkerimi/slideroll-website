@@ -15,11 +15,13 @@ function ScrollToTop() {
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter basename="/slideroll">
-    <ScrollToTop />
-    <Routes>
-      <Route path="/privacy" element={<PrivacyPage />} />
-      <Route path="/support" element={<SupportPage />} />
-      <Route path="*" element={<LanguageProvider><App /></LanguageProvider>} />
-    </Routes>
+    <LanguageProvider>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="*" element={<App />} />
+      </Routes>
+    </LanguageProvider>
   </BrowserRouter>,
 )

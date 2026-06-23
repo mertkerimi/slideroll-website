@@ -1,6 +1,7 @@
-import { useState } from 'react'
 import Layout from '../components/Layout'
-import LangSwitcher, { type Lang } from '../components/LangSwitcher'
+import { useLanguage } from '../i18n/LanguageContext'
+
+type Lang = 'en' | 'tr' | 'de'
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <section style={{ marginBottom: 28 }}>
@@ -180,15 +181,11 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
 }
 
 export default function PrivacyPage() {
-  const [lang, setLang] = useState<Lang>('en')
-  const { title, meta, sections } = content[lang]
+  const { lang } = useLanguage()
+  const { title, meta, sections } = content[lang as Lang] ?? content['en']
 
   return (
-    <Layout title={`SlideRoll ${title}`}>
-      <LangSwitcher current={lang} onChange={setLang} />
-
-      <p style={{ fontSize: 13, color: 'rgba(240,244,255,0.35)', marginBottom: 32 }}>{meta}</p>
-
+    <Layout title={`SlideRoll ${title}`} meta={meta}>
       {sections}
     </Layout>
   )

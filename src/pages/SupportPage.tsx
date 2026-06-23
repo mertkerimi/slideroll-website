@@ -1,6 +1,7 @@
-import { useState } from 'react'
 import Layout from '../components/Layout'
-import LangSwitcher, { type Lang } from '../components/LangSwitcher'
+import { useLanguage } from '../i18n/LanguageContext'
+
+type Lang = 'en' | 'tr' | 'de'
 
 const Faq = ({ q, a }: { q: string; a: string }) => (
   <div style={{
@@ -93,12 +94,11 @@ const content: Record<Lang, {
 }
 
 export default function SupportPage() {
-  const [lang, setLang] = useState<Lang>('en')
-  const c = content[lang]
+  const { lang } = useLanguage()
+  const c = content[lang as Lang] ?? content['en']
 
   return (
-    <Layout title={`SlideRoll ${c.title}`}>
-      <LangSwitcher current={lang} onChange={setLang} />
+    <Layout title={`SlideRoll ${c.title}`} meta={c.meta}>
 
       <p style={{ fontSize: 15, color: 'rgba(240,244,255,0.7)', marginBottom: 28, lineHeight: 1.75 }}>
         {c.intro}
