@@ -554,7 +554,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://mrtkrm.com/slideroll-privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
+              <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#C026D3')} onMouseLeave={e => (e.currentTarget.style.color = '#7C3AED')}>
                 {t.privacy.policy}
               </a>
@@ -621,11 +621,11 @@ export default function App() {
             <div style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', marginTop: 4 }}>{t.footer.tagline}</div>
           </div>
           <nav style={{ display: 'flex', gap: 24 }}>
-            <a href="https://mrtkrm.com/slideroll-privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.policy}
             </a>
-            <a href="https://mrtkrm.com/slideroll-support" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <a href="https://mrtkrm.com/slideroll/support" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.support}
             </a>
