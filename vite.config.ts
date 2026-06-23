@@ -5,6 +5,10 @@ import path from 'path'
 export default defineConfig({
   base: '/slideroll/',
   plugins: [react()],
+  build: {
+    outDir: 'dist/slideroll',
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
