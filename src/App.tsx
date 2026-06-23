@@ -343,7 +343,7 @@ export default function App() {
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C026D3', animation: 'pulseDot 2s ease-in-out infinite', display: 'inline-block' }} />
                 {t.hero.badge}
               </div>
-              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>MERT</h1>
+              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>SlideRoll</h1>
               <p style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.2, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.hero.subtitle}</p>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 32, maxWidth: 440 }}>{t.hero.desc}</p>
               <a href="#download" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '18px 36px', borderRadius: 9999, fontSize: 18, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)', transition: 'transform 0.2s, box-shadow 0.2s', letterSpacing: '-0.01em' }}
