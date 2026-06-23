@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, memo } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SparklesCore } from '@/components/ui/Sparkles'
 import { useLanguage } from '@/i18n/LanguageContext'
@@ -554,10 +555,10 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
+              <Link to="/privacy" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s', textDecoration: 'none' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#C026D3')} onMouseLeave={e => (e.currentTarget.style.color = '#7C3AED')}>
                 {t.privacy.policy}
-              </a>
+              </Link>
             </motion.div>
           </div>
         </section>
@@ -621,14 +622,14 @@ export default function App() {
             <div style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', marginTop: 4 }}>{t.footer.tagline}</div>
           </div>
           <nav style={{ display: 'flex', gap: 24 }}>
-            <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <Link to="/privacy" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s', textDecoration: 'none' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.policy}
-            </a>
-            <a href="https://mrtkrm.com/slideroll/support" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            </Link>
+            <Link to="/support" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s', textDecoration: 'none' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.support}
-            </a>
+            </Link>
           </nav>
           <p style={{ fontSize: 12, color: 'rgba(240,244,255,0.35)', margin: 0 }}>{t.footer.copy}</p>
         </div>

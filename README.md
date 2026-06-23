@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# SlideRoll Website 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SlideRoll** iOS uygulamasının resmi landing page'i. React + Vite ile geliştirilmiş, 12 dil desteği sunan çok dilli bir web sitesi.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Ekran Görüntüleri
 
-## React Compiler
+<p align="center">
+  <img src="Screenshots/SlideRoll-home.png" width="18%" alt="Ana Ekran" />
+  <img src="Screenshots/IMG_3500-portrait.png" width="18%" alt="Ekran 2" />
+  <img src="Screenshots/IMG_3501-portrait.png" width="18%" alt="Ekran 3" />
+  <img src="Screenshots/IMG_3502-portrait.png" width="18%" alt="Ekran 4" />
+  <img src="Screenshots/IMG_3504-portrait.png" width="18%" alt="Ekran 5" />
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Özellikler
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **12 Dil Desteği** — TR, EN, DE, FR, ES, IT, PT, JA, KO, ZH, RU, AR
+- **RTL Desteği** — Arapça için sağdan sola düzen
+- **Framer Motion Animasyonları** — Smooth geçişler ve hover efektleri
+- **Özel Parçacık Animasyonu** — Canvas tabanlı Sparkles efekti
+- **Gizlilik & Destek Sayfaları** — App içi route ile açılan sayfalar
+- **Responsive Tasarım** — Mobil ve masaüstü uyumlu
+- **Vercel Deployment** — Otomatik CI/CD
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Teknoloji
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React 19** + **TypeScript 6**
+- **React Router 7** — SPA routing
+- **Framer Motion** — Animasyonlar
+- **Vite 8** — Build tool
+- **Vercel** — Hosting
+
+---
+
+## Kurulum
+
+```bash
+git clone https://github.com/mertkerimi/slideroll-website.git
+cd slideroll-website
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Uygulama `http://localhost:5173/slideroll/` adresinde çalışır.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Build & Deploy
+
+```bash
+npm run build
 ```
+
+Vercel'e her push'ta otomatik deploy edilir.
+
+---
+
+## Geliştirici
+
+**Mert Kerimi** — [@mertkerimi](https://github.com/mertkerimi)
+
+---
+
+## Lisans
+
+MIT License

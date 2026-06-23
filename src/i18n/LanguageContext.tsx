@@ -11,7 +11,7 @@ interface LanguageCtx {
 const Ctx = createContext<LanguageCtx | null>(null)
 
 function detectLang(): LangCode {
-  const saved = localStorage.getItem('pm_lang') as LangCode | null
+  const saved = localStorage.getItem('sr_lang') as LangCode | null
   if (saved && saved in translations) return saved
   const browser = navigator.language.slice(0, 2).toLowerCase()
   const map: Record<string, LangCode> = {
@@ -26,7 +26,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLang = (l: LangCode) => {
     setLangState(l)
-    localStorage.setItem('pm_lang', l)
+    localStorage.setItem('sr_lang', l)
   }
 
   const rtl = LANG_META[lang].rtl === true
