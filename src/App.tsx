@@ -23,12 +23,13 @@ const THEMES: [string, string][] = [
 ]
 const SWIPE_COLORS = ['#22C55E', '#EF4444', '#FBBF24']
 
+const BASE = import.meta.env.BASE_URL
 const SCREENSHOT_SRCS = [
-  '/screenshots/swipe-to-clean.png',
-  '/screenshots/by-year-month.png',
-  '/screenshots/track-progress.png',
-  '/screenshots/reclaim-storage.png',
-  '/screenshots/make-it-yours.png',
+  `${BASE}screenshots/swipe-to-clean.png`,
+  `${BASE}screenshots/by-year-month.png`,
+  `${BASE}screenshots/track-progress.png`,
+  `${BASE}screenshots/reclaim-storage.png`,
+  `${BASE}screenshots/make-it-yours.png`,
 ]
 
 const AppleIcon = () => (
@@ -293,7 +294,7 @@ const NavBar = memo(() => {
     }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', height: '100%', display: 'flex', alignItems: 'center', gap: 32 }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 800, fontSize: 18, color: '#fff', flexShrink: 0 }}>
-          <img src="/app-icon.png" alt="SlideRoll" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
+          <img src={`${BASE}app-icon.png`} alt="SlideRoll" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
           SlideRoll
         </a>
         <div className="nav-links" style={{ display: 'flex', gap: 28, flex: 1 }}>
@@ -553,7 +554,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://slideroll-legal.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
+              <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#C026D3')} onMouseLeave={e => (e.currentTarget.style.color = '#7C3AED')}>
                 {t.privacy.policy}
               </a>
@@ -620,11 +621,11 @@ export default function App() {
             <div style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', marginTop: 4 }}>{t.footer.tagline}</div>
           </div>
           <nav style={{ display: 'flex', gap: 24 }}>
-            <a href="https://slideroll-legal.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <a href="https://mrtkrm.com/slideroll/privacy" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.policy}
             </a>
-            <a href="mailto:metomonto@gmail.com" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <a href="https://mrtkrm.com/slideroll/support" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.support}
             </a>
