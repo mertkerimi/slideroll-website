@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/slideroll/(.*)", "destination": "/slideroll/index.html" }
+  ]
+}
