@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
+  base: '/slideroll/',
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: 'dist/slideroll',
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
