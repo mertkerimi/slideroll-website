@@ -2,9 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/slideroll/privacy", "destination": "/slideroll/index.html" },
-    { "source": "/slideroll/support", "destination": "/slideroll/index.html" },
-    { "source": "/slideroll/:path*", "destination": "/slideroll/index.html" },
-    { "source": "/slideroll", "destination": "/slideroll/index.html" }
+    { "source": "/slideroll/:path*", "destination": "/index.html" },
+    { "source": "/slideroll", "destination": "/index.html" }
   ]
 }
