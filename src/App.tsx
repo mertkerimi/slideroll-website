@@ -210,7 +210,7 @@ const IntroSection = memo(() => {
           fontWeight: 900, letterSpacing: '-0.045em',
           color: '#fff', lineHeight: 1, textAlign: 'center', marginBottom: '1rem',
         }}>
-          PhotoMint
+          SlideRoll
         </h1>
 
         <div style={{ position: 'relative', width: 'min(560px, 75vw)', height: 2 }}>
@@ -293,8 +293,8 @@ const NavBar = memo(() => {
     }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', height: '100%', display: 'flex', alignItems: 'center', gap: 32 }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 800, fontSize: 18, color: '#fff', flexShrink: 0 }}>
-          <img src="/app-icon.png" alt="PhotoMint" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
-          PhotoMint
+          <img src="/app-icon.png" alt="SlideRoll" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
+          SlideRoll
         </a>
         <div className="nav-links" style={{ display: 'flex', gap: 28, flex: 1 }}>
           {navLinks.map(({ href, label }) => (
@@ -342,7 +342,7 @@ export default function App() {
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C026D3', animation: 'pulseDot 2s ease-in-out infinite', display: 'inline-block' }} />
                 {t.hero.badge}
               </div>
-              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</h1>
+              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>SlideRoll</h1>
               <p style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.2, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.hero.subtitle}</p>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 32, maxWidth: 440 }}>{t.hero.desc}</p>
               <a href="#download" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '18px 36px', borderRadius: 9999, fontSize: 18, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)', transition: 'transform 0.2s, box-shadow 0.2s', letterSpacing: '-0.01em' }}
@@ -374,7 +374,7 @@ export default function App() {
                 <div style={{ flex: 1, background: '#121219', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 14px 4px', fontSize: 11, fontWeight: 600, color: '#F0F4FF' }}><span>9:41</span><span>●●●</span></div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 14px 8px' }}>
-                    <span style={{ fontSize: 15, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</span>
+                    <span style={{ fontSize: 15, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>SlideRoll</span>
                     <span style={{ fontSize: 11, color: 'rgba(240,244,255,0.35)' }}>June 2024</span>
                   </div>
                   <div style={{ flex: 1, position: 'relative', padding: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -509,7 +509,7 @@ export default function App() {
                         key={index}
                         index={index}
                         src={src}
-                        alt={`PhotoMint – ${t.screenshots.slides[index]}`}
+                        alt={`SlideRoll – ${t.screenshots.slides[index]}`}
                         style={{
                           position: 'absolute',
                           top: 0, left: '50%',
@@ -553,7 +553,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://mertkerimi.github.io/photomint-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
+              <a href="https://slideroll-legal.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: '#7C3AED', transition: 'color 0.15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#C026D3')} onMouseLeave={e => (e.currentTarget.style.color = '#7C3AED')}>
                 {t.privacy.policy}
               </a>
@@ -616,11 +616,11 @@ export default function App() {
       <footer style={{ background: '#121219', borderTop: '1px solid rgba(255,255,255,0.08)', padding: '3rem 0' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>PhotoMint</div>
+            <div style={{ fontSize: 18, fontWeight: 800, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>SlideRoll</div>
             <div style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', marginTop: 4 }}>{t.footer.tagline}</div>
           </div>
           <nav style={{ display: 'flex', gap: 24 }}>
-            <a href="https://mertkerimi.github.io/photomint-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
+            <a href="https://slideroll-legal.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(240,244,255,0.35)', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#F0F4FF')} onMouseLeave={e => (e.currentTarget.style.color = 'rgba(240,244,255,0.35)')}>
               {t.footer.policy}
             </a>
