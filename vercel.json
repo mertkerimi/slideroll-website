@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/slideroll", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/slideroll/:path*", "destination": "/index.html" },
     { "source": "/slideroll", "destination": "/index.html" }
