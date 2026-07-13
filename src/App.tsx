@@ -33,11 +33,6 @@ const SCREENSHOT_SRCS = [
   `${BASE}screenshots/make-it-yours.png`,
 ]
 
-const AppleIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
-    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-  </svg>
-)
 
 /* ──────────────────────────────────────────────────
    iPHONE MOCKUP
@@ -294,7 +289,7 @@ const NavBar = memo(() => {
       opacity: 0, pointerEvents: 'none',
     }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 2rem', height: '100%', display: 'flex', alignItems: 'center', gap: 32 }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 800, fontSize: 18, color: '#fff', flexShrink: 0 }}>
+        <a href="https://apps.apple.com/app/id6783137235" style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 800, fontSize: 18, color: '#fff', flexShrink: 0 }}>
           <img src={`${BASE}app-icon.png`} alt="SlideRoll" style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, boxShadow: '0 2px 12px rgba(192,38,211,0.35)', display: 'block' }} />
           SlideRoll
         </a>
@@ -309,10 +304,10 @@ const NavBar = memo(() => {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
           <span className="nav-lang"><LangPicker /></span>
-          <a href="#download" className="nav-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 18px', borderRadius: 9999, fontSize: 13, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED, #C026D3)', boxShadow: '0 2px 14px rgba(124,58,237,0.45)', transition: 'transform 0.2s, box-shadow 0.2s', whiteSpace: 'nowrap' }}
-            onMouseEnter={e => { e.currentTarget.style.transform='translateY(-1px)'; e.currentTarget.style.boxShadow='0 4px 20px rgba(124,58,237,0.6)' }}
-            onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 2px 14px rgba(124,58,237,0.45)' }}>
-            <AppleIcon /> {t.nav.comingSoon}
+          <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" className="nav-cta" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
+            onMouseEnter={e => { e.currentTarget.style.transform='translateY(-1px)'; e.currentTarget.style.opacity='0.85' }}
+            onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
+            <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 36 }} />
           </a>
         </div>
       </div>
@@ -347,10 +342,10 @@ export default function App() {
               <h1 style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 16, background: 'linear-gradient(135deg, #A78BFA, #C026D3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>SlideRoll</h1>
               <p style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.2, color: '#F0F4FF', marginBottom: 16, whiteSpace: 'pre-line' }}>{t.hero.subtitle}</p>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 32, maxWidth: 440 }}>{t.hero.desc}</p>
-              <a href="#download" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '18px 36px', borderRadius: 9999, fontSize: 18, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)', transition: 'transform 0.2s, box-shadow 0.2s', letterSpacing: '-0.01em' }}
-                onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 12px 40px rgba(124,58,237,0.65), 0 4px 12px rgba(192,38,211,0.4)' }}
-                onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 6px 32px rgba(124,58,237,0.5), 0 2px 8px rgba(192,38,211,0.3)' }}>
-                <AppleIcon /> {t.hero.cta}
+              <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.opacity='0.85' }}
+                onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
+                <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 56 }} />
               </a>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 48 }}>
                 {[
@@ -602,10 +597,10 @@ export default function App() {
               <h2 style={{ fontSize: 'clamp(1.875rem, 4.5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#F0F4FF', marginBottom: 20, whiteSpace: 'pre-line' }}>{t.cta.heading}</h2>
               <p style={{ fontSize: 18, color: 'rgba(240,244,255,0.65)', marginBottom: 40, whiteSpace: 'pre-line' }}>{t.cta.sub}</p>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-                <a href="#" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 14, padding: '22px 48px', borderRadius: 9999, fontSize: 20, fontWeight: 700, color: '#fff', background: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 100%)', boxShadow: '0 8px 40px rgba(124,58,237,0.55), 0 2px 12px rgba(192,38,211,0.35)', letterSpacing: '-0.01em', minWidth: 320, transition: 'transform 0.2s, box-shadow 0.2s' }}
-                  onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 14px 50px rgba(124,58,237,0.7), 0 4px 16px rgba(192,38,211,0.45)' }}
-                  onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 8px 40px rgba(124,58,237,0.55), 0 2px 12px rgba(192,38,211,0.35)' }}>
-                  <AppleIcon /> {t.cta.cta}
+                <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.opacity='0.85' }}
+                  onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
+                  <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 64 }} />
                 </a>
                 <p style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', margin: 0 }}>{t.cta.note}</p>
               </div>
