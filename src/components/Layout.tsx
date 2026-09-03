@@ -92,22 +92,7 @@ export default function Layout({ children, title, meta }: LayoutProps) {
         WebkitBackdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
       }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 1.5rem', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-            <img
-              src="/app-icon.png"
-              alt="SlideRoll"
-              style={{ width: 32, height: 32, borderRadius: 8, boxShadow: '0 2px 12px rgba(192,38,211,0.35)' }}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-            />
-            <span style={{
-              fontWeight: 800, fontSize: 17,
-              background: 'linear-gradient(135deg, #A78BFA, #C026D3)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-            }}>
-              SlideRoll
-            </span>
-          </Link>
+        <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 1.5rem', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
           <LangPicker />
         </div>
       </nav>
