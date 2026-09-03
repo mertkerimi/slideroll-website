@@ -3,6 +3,8 @@
     { "source": "/", "destination": "/slideroll", "permanent": false }
   ],
   "rewrites": [
+    { "source": "/deskwren", "destination": "https://deskwren-website.vercel.app/deskwren" },
+    { "source": "/deskwren/:path*", "destination": "https://deskwren-website.vercel.app/deskwren/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
