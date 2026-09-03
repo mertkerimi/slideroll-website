@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
 import type { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { LANG_META, type LangCode } from '../i18n/translations'
 
