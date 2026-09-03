@@ -185,7 +185,7 @@ export default function PrivacyPage() {
   const { title, meta, sections } = content[lang as Lang] ?? content['en']
 
   return (
-    <Layout title={`SlideRoll ${title}`} meta={meta}>
+    <Layout title={title} meta={meta}>
       {sections}
     </Layout>
   )
