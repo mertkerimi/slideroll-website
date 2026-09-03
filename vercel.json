@@ -4,7 +4,7 @@
   ],
   "rewrites": [
     { "source": "/deskwren", "destination": "https://deskwren-website.vercel.app/deskwren" },
-    { "source": "/deskwren/:path*", "destination": "https://deskwren-website.vercel.app/deskwren/:path*" },
+    { "source": "/deskwren/(.*)", "destination": "https://deskwren-website.vercel.app/deskwren/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
