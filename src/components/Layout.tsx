@@ -116,17 +116,6 @@ export default function Layout({ children, title, meta }: LayoutProps) {
         {children}
       </main>
 
-      <footer style={{ borderTop: '1px solid rgba(255,255,255,0.08)', background: '#0e0e15' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', padding: '2rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ fontSize: 12, color: 'rgba(240,244,255,0.3)', margin: 0 }}>
-            © {new Date().getFullYear()} SlideRoll
-          </p>
-          <nav style={{ display: 'flex', gap: 20 }}>
-            <Link to="/privacy" style={{ fontSize: 13, color: 'rgba(240,244,255,0.4)', textDecoration: 'none' }}>Privacy</Link>
-            <Link to="/support" style={{ fontSize: 13, color: 'rgba(240,244,255,0.4)', textDecoration: 'none' }}>Support</Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
 }
