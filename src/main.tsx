@@ -14,7 +14,7 @@ function ScrollToTop() {
 }
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename="/slideroll">
+  <BrowserRouter basename="/flikk">
     <LanguageProvider>
       <ScrollToTop />
       <Routes>

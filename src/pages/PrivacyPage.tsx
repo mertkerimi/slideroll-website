@@ -39,18 +39,18 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
     meta: 'Last updated: June 2026',
     sections: (
       <>
-        <P>This privacy policy explains how <strong style={{ color: '#F0F4FF' }}>SlideRoll</strong> ("the app") handles your personal data. We value your privacy: SlideRoll processes your photos entirely on your device and never uploads them to any server. No account is required.</P>
+        <P>This privacy policy explains how <strong style={{ color: '#F0F4FF' }}>Flikk</strong> ("the app") handles your personal data. We value your privacy: Flikk processes your photos entirely on your device and never uploads them to any server. No account is required.</P>
         <Section title="Access to Your Photos">
-          <P>SlideRoll requests access to your photo library so you can view, organize, and delete photos. All processing happens only on your device. Your photos and videos are <strong style={{ color: '#F0F4FF' }}>never</strong> sent, copied, or stored on our servers or any third-party servers.</P>
+          <P>Flikk requests access to your photo library so you can view, organize, and delete photos. All processing happens only on your device. Your photos and videos are <strong style={{ color: '#F0F4FF' }}>never</strong> sent, copied, or stored on our servers or any third-party servers.</P>
         </Section>
         <Section title="Data Stored on Device">
           <P>Your progress, settings (language, theme), and statistics are stored locally on your device only. This data is not shared with us.</P>
         </Section>
         <Section title="Subscriptions and Purchases">
-          <P>SlideRoll may offer an optional subscription (in-app purchase). All payments are processed through the <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong>. We do not collect, see, or store your credit card or payment information — that data is handled solely by Apple. Your subscription is verified on your device through Apple's systems. Subscriptions can be managed or cancelled in your Apple ID account settings. See <ExtLink href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</ExtLink>.</P>
+          <P>Flikk may offer an optional subscription (in-app purchase). All payments are processed through the <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong>. We do not collect, see, or store your credit card or payment information — that data is handled solely by Apple. Your subscription is verified on your device through Apple's systems. Subscriptions can be managed or cancelled in your Apple ID account settings. See <ExtLink href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</ExtLink>.</P>
         </Section>
         <Section title="Advertising">
-          <P>The free version of SlideRoll may display ads through Google AdMob. Google may collect data such as device identifiers to serve ads. On iOS you are asked for tracking permission (App Tracking Transparency); if you decline, you will be shown non-personalized ads. Learn more: <ExtLink href="https://policies.google.com/privacy">Google Privacy Policy</ExtLink>.</P>
+          <P>The free version of Flikk may display ads through Google AdMob. Google may collect data such as device identifiers to serve ads. On iOS you are asked for tracking permission (App Tracking Transparency); if you decline, you will be shown non-personalized ads. Learn more: <ExtLink href="https://policies.google.com/privacy">Google Privacy Policy</ExtLink>.</P>
         </Section>
         <Section title="International Data Transfer">
           <P>Third parties that provide advertising and payment services, such as Google and Apple, may process data on servers outside your country. By using these services you consent to such transfers.</P>
@@ -68,7 +68,7 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
           <P>We do <strong style={{ color: '#F0F4FF' }}>not</strong> sell your personal information. California residents have the right to know the categories of information collected, request deletion, and not be discriminated against for exercising their rights.</P>
         </Section>
         <Section title="Children's Privacy">
-          <P>SlideRoll does not knowingly collect personal data from children under 13. If we learn that we have collected data from a child, we will delete it.</P>
+          <P>Flikk does not knowingly collect personal data from children under 13. If we learn that we have collected data from a child, we will delete it.</P>
         </Section>
         <Section title="Links to Other Sites">
           <P>Our policy may contain links to third-party sites. We are not responsible for the content or privacy practices of those sites.</P>
@@ -87,18 +87,18 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
     meta: 'Son güncelleme: Haziran 2026',
     sections: (
       <>
-        <P>Bu gizlilik politikası, <strong style={{ color: '#F0F4FF' }}>SlideRoll</strong> ("uygulama") uygulamasının kişisel verilerinizi nasıl ele aldığını açıklar. Gizliliğinize değer veriyoruz: SlideRoll, fotoğraflarınızı tamamen cihazınızda işler ve onları hiçbir sunucuya yüklemez. Hesap oluşturmanız gerekmez.</P>
+        <P>Bu gizlilik politikası, <strong style={{ color: '#F0F4FF' }}>Flikk</strong> ("uygulama") uygulamasının kişisel verilerinizi nasıl ele aldığını açıklar. Gizliliğinize değer veriyoruz: Flikk, fotoğraflarınızı tamamen cihazınızda işler ve onları hiçbir sunucuya yüklemez. Hesap oluşturmanız gerekmez.</P>
         <Section title="Fotoğraflarınıza Erişim">
-          <P>SlideRoll, fotoğraflarınızı görüntülemeniz, düzenlemeniz ve silmeniz için fotoğraf kütüphanenize erişim ister. Tüm işlemler yalnızca cihazınızda gerçekleşir. Fotoğraflarınız veya videolarınız <strong style={{ color: '#F0F4FF' }}>asla</strong> bizim veya üçüncü tarafların sunucularına gönderilmez, kopyalanmaz veya saklanmaz.</P>
+          <P>Flikk, fotoğraflarınızı görüntülemeniz, düzenlemeniz ve silmeniz için fotoğraf kütüphanenize erişim ister. Tüm işlemler yalnızca cihazınızda gerçekleşir. Fotoğraflarınız veya videolarınız <strong style={{ color: '#F0F4FF' }}>asla</strong> bizim veya üçüncü tarafların sunucularına gönderilmez, kopyalanmaz veya saklanmaz.</P>
         </Section>
         <Section title="Cihazda Saklanan Veriler">
           <P>İlerlemeniz, ayarlarınız (dil, tema) ve istatistikleriniz yalnızca cihazınızda yerel olarak saklanır. Bu veriler bizimle paylaşılmaz.</P>
         </Section>
         <Section title="Abonelikler ve Satın Almalar">
-          <P>SlideRoll isteğe bağlı bir abonelik (uygulama içi satın alma) sunabilir. Tüm ödemeler <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong> üzerinden işlenir. Kredi kartı veya ödeme bilgilerinizi toplamaz, görmez veya saklamayız — bu bilgiler yalnızca Apple tarafından işlenir. Aboneliğiniz cihazınızda Apple'ın sistemleri aracılığıyla doğrulanır. Abonelikler, Apple Kimliği hesabınızın ayarlarından yönetilebilir veya iptal edilebilir. Apple'ın politikası: <ExtLink href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</ExtLink>.</P>
+          <P>Flikk isteğe bağlı bir abonelik (uygulama içi satın alma) sunabilir. Tüm ödemeler <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong> üzerinden işlenir. Kredi kartı veya ödeme bilgilerinizi toplamaz, görmez veya saklamayız — bu bilgiler yalnızca Apple tarafından işlenir. Aboneliğiniz cihazınızda Apple'ın sistemleri aracılığıyla doğrulanır. Abonelikler, Apple Kimliği hesabınızın ayarlarından yönetilebilir veya iptal edilebilir. Apple'ın politikası: <ExtLink href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</ExtLink>.</P>
         </Section>
         <Section title="Reklamlar">
-          <P>SlideRoll'ın ücretsiz sürümü, Google AdMob aracılığıyla reklam gösterebilir. Google, reklam sunmak için cihaz tanımlayıcıları gibi verileri toplayabilir. iOS'ta size izleme izni sorulur (App Tracking Transparency); izni reddederseniz size kişiselleştirilmemiş reklamlar gösterilir. Daha fazlası: <ExtLink href="https://policies.google.com/privacy">Google Gizlilik Politikası</ExtLink>.</P>
+          <P>Flikk'ın ücretsiz sürümü, Google AdMob aracılığıyla reklam gösterebilir. Google, reklam sunmak için cihaz tanımlayıcıları gibi verileri toplayabilir. iOS'ta size izleme izni sorulur (App Tracking Transparency); izni reddederseniz size kişiselleştirilmemiş reklamlar gösterilir. Daha fazlası: <ExtLink href="https://policies.google.com/privacy">Google Gizlilik Politikası</ExtLink>.</P>
         </Section>
         <Section title="Uluslararası Veri Aktarımı">
           <P>Reklam ve ödeme hizmetlerini sağlayan Google ve Apple gibi üçüncü taraflar, verileri ülkenizin dışındaki sunucularda işleyebilir. Bu hizmetleri kullanarak bu tür aktarımları kabul etmiş olursunuz.</P>
@@ -116,7 +116,7 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
           <P>Kişisel bilgilerinizi <strong style={{ color: '#F0F4FF' }}>satmıyoruz</strong>. California sakinleri, toplanan bilgi kategorilerini öğrenme, silme talep etme ve haklarını kullandıkları için ayrımcılığa uğramama hakkına sahiptir.</P>
         </Section>
         <Section title="Çocukların Gizliliği">
-          <P>SlideRoll 13 yaşından küçük çocuklardan bilerek kişisel veri toplamaz. Bir çocuğa ait veri topladığımızı fark edersek bu veriyi sileriz.</P>
+          <P>Flikk 13 yaşından küçük çocuklardan bilerek kişisel veri toplamaz. Bir çocuğa ait veri topladığımızı fark edersek bu veriyi sileriz.</P>
         </Section>
         <Section title="Diğer Sitelere Bağlantılar">
           <P>Politikamız üçüncü taraf bağlantılar içerebilir. Bu sitelerin içeriğinden veya gizlilik uygulamalarından sorumlu değiliz.</P>
@@ -135,18 +135,18 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
     meta: 'Zuletzt aktualisiert: Juni 2026',
     sections: (
       <>
-        <P>Diese Datenschutzerklärung erläutert, wie <strong style={{ color: '#F0F4FF' }}>SlideRoll</strong> ("die App") mit Ihren personenbezogenen Daten umgeht. Ihre Privatsphäre ist uns wichtig: SlideRoll verarbeitet Ihre Fotos vollständig auf Ihrem Gerät und lädt sie niemals auf einen Server hoch. Ein Konto ist nicht erforderlich.</P>
+        <P>Diese Datenschutzerklärung erläutert, wie <strong style={{ color: '#F0F4FF' }}>Flikk</strong> ("die App") mit Ihren personenbezogenen Daten umgeht. Ihre Privatsphäre ist uns wichtig: Flikk verarbeitet Ihre Fotos vollständig auf Ihrem Gerät und lädt sie niemals auf einen Server hoch. Ein Konto ist nicht erforderlich.</P>
         <Section title="Zugriff auf Ihre Fotos">
-          <P>SlideRoll fordert Zugriff auf Ihre Fotomediathek an, damit Sie Fotos ansehen, organisieren und löschen können. Die gesamte Verarbeitung findet ausschließlich auf Ihrem Gerät statt. Ihre Fotos und Videos werden <strong style={{ color: '#F0F4FF' }}>niemals</strong> an unsere Server oder Server Dritter gesendet, kopiert oder dort gespeichert.</P>
+          <P>Flikk fordert Zugriff auf Ihre Fotomediathek an, damit Sie Fotos ansehen, organisieren und löschen können. Die gesamte Verarbeitung findet ausschließlich auf Ihrem Gerät statt. Ihre Fotos und Videos werden <strong style={{ color: '#F0F4FF' }}>niemals</strong> an unsere Server oder Server Dritter gesendet, kopiert oder dort gespeichert.</P>
         </Section>
         <Section title="Auf dem Gerät gespeicherte Daten">
           <P>Ihr Fortschritt, Ihre Einstellungen (Sprache, Design) und Statistiken werden nur lokal auf Ihrem Gerät gespeichert. Diese Daten werden nicht mit uns geteilt.</P>
         </Section>
         <Section title="Abonnements und Käufe">
-          <P>SlideRoll kann ein optionales Abonnement (In-App-Kauf) anbieten. Alle Zahlungen werden über den <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong> abgewickelt. Wir erfassen, sehen oder speichern Ihre Kreditkarten- oder Zahlungsdaten nicht — diese werden ausschließlich von Apple verarbeitet. Siehe <ExtLink href="https://www.apple.com/legal/privacy/">Apples Datenschutzrichtlinie</ExtLink>.</P>
+          <P>Flikk kann ein optionales Abonnement (In-App-Kauf) anbieten. Alle Zahlungen werden über den <strong style={{ color: '#F0F4FF' }}>Apple App Store</strong> abgewickelt. Wir erfassen, sehen oder speichern Ihre Kreditkarten- oder Zahlungsdaten nicht — diese werden ausschließlich von Apple verarbeitet. Siehe <ExtLink href="https://www.apple.com/legal/privacy/">Apples Datenschutzrichtlinie</ExtLink>.</P>
         </Section>
         <Section title="Werbung">
-          <P>Die kostenlose Version von SlideRoll kann über Google AdMob Werbung anzeigen. Google kann Daten wie Gerätekennungen erfassen, um Anzeigen auszuliefern. Mehr über Googles Datenpraktiken: <ExtLink href="https://policies.google.com/privacy">Google-Datenschutzerklärung</ExtLink>.</P>
+          <P>Die kostenlose Version von Flikk kann über Google AdMob Werbung anzeigen. Google kann Daten wie Gerätekennungen erfassen, um Anzeigen auszuliefern. Mehr über Googles Datenpraktiken: <ExtLink href="https://policies.google.com/privacy">Google-Datenschutzerklärung</ExtLink>.</P>
         </Section>
         <Section title="Internationale Datenübertragung">
           <P>Drittanbieter, die Werbe- und Zahlungsdienste bereitstellen, wie Google und Apple, können Daten auf Servern außerhalb Ihres Landes verarbeiten. Durch die Nutzung dieser Dienste stimmen Sie solchen Übertragungen zu.</P>
@@ -164,7 +164,7 @@ const content: Record<Lang, { title: string; meta: string; sections: React.React
           <P>Wir <strong style={{ color: '#F0F4FF' }}>verkaufen</strong> Ihre personenbezogenen Daten nicht. Einwohner Kaliforniens haben das Recht, die Kategorien der erfassten Daten zu erfahren, deren Löschung zu verlangen und nicht für die Ausübung ihrer Rechte benachteiligt zu werden.</P>
         </Section>
         <Section title="Datenschutz für Kinder">
-          <P>SlideRoll erfasst wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Falls wir feststellen, dass wir Daten eines Kindes erfasst haben, löschen wir diese.</P>
+          <P>Flikk erfasst wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Falls wir feststellen, dass wir Daten eines Kindes erfasst haben, löschen wir diese.</P>
         </Section>
         <Section title="Links zu anderen Websites">
           <P>Unsere Richtlinie kann Links zu Websites Dritter enthalten. Wir sind nicht für deren Inhalte oder Datenschutzpraktiken verantwortlich.</P>

@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/slideroll", "permanent": false }
+    { "source": "/", "destination": "/flikk", "permanent": false }
   ],
   "rewrites": [
     { "source": "/deskwren", "destination": "https://deskwren-website.vercel.app/deskwren" },
