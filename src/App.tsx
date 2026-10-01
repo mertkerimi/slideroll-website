@@ -307,7 +307,7 @@ const NavBar = memo(() => {
           <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" className="nav-cta" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
             onMouseEnter={e => { e.currentTarget.style.transform='translateY(-1px)'; e.currentTarget.style.opacity='0.85' }}
             onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
-            <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 36 }} />
+            <img src={`${BASE}app-store-badge.png`} alt="Download on the App Store" style={{ height: 36 }} />
           </a>
         </div>
       </div>
@@ -345,7 +345,7 @@ export default function App() {
               <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
                 onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.opacity='0.85' }}
                 onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
-                <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 56 }} />
+                <img src={`${BASE}app-store-badge.png`} alt="Download on the App Store" style={{ height: 56 }} />
               </a>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 48 }}>
                 {[
@@ -600,7 +600,7 @@ export default function App() {
                 <a href="https://apps.apple.com/us/app/slideroll-photo-cleaner/id6783137235" style={{ display: 'inline-flex', transition: 'transform 0.2s, opacity 0.2s' }}
                   onMouseEnter={e => { e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.opacity='0.85' }}
                   onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.opacity='1' }}>
-                  <img src="/app-store-badge.png" alt="Download on the App Store" style={{ height: 64 }} />
+                  <img src={`${BASE}app-store-badge.png`} alt="Download on the App Store" style={{ height: 64 }} />
                 </a>
                 <p style={{ fontSize: 14, color: 'rgba(240,244,255,0.35)', margin: 0 }}>{t.cta.note}</p>
               </div>

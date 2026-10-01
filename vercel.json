@@ -1,10 +1,12 @@
 {
+  "outputDirectory": "dist",
   "redirects": [
     { "source": "/", "destination": "/flikk", "permanent": false }
   ],
   "rewrites": [
+    { "source": "/app-ads.txt", "destination": "/flikk/app-ads.txt" },
     { "source": "/deskwren", "destination": "https://deskwren-website.vercel.app/deskwren" },
     { "source": "/deskwren/(.*)", "destination": "https://deskwren-website.vercel.app/deskwren/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/flikk/(.*)", "destination": "/flikk/index.html" }
   ]
 }
